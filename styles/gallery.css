@@ -1,0 +1,165 @@
+/* gallery page -------------------------------------------------------------- */
+
+/* Make the container full width and height and allow flex items to wrap */
+.galleryWrap{
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   border-bottom: 1px solid black;
+   /* animation: skewIntro 1.5s ease-in-out forwards; */
+ }
+
+ @keyframes skewIntro{
+   from{
+      transform: skew(0deg, 20deg);
+      margin-top: 20%;
+      opacity: 0;
+   }
+
+   to{
+      transform: skew(0deg, 0deg);
+      margin-top: 0;
+      opacity: 1;
+   }
+ }
+
+ .nameListWrap{
+    min-height: 100vh;
+    display: grid;
+    padding: 5vw 0vw;
+    place-items: center;
+ }
+
+ .nameListWrap > h1{
+    width: 70%;
+    text-align: left;
+    margin: 0;
+    height: min-content;
+ }
+
+ .nameList{
+   columns: 3;
+   width: 70%;
+   margin: auto;
+   text-align: left;
+   margin-top: 0;
+ }
+
+ .nameLink{
+   display: block;
+   line-height: 3;
+ }
+
+ .galleryRow{
+    width: 100vw;
+    display: flex;
+ }
+ 
+ .spacer{
+   min-height: 45vh;
+   display: inline-block;
+   flex-grow: 1;
+   flex-shrink: 1;
+   border: 1px solid var(--black);
+   flex-basis: 15vw;
+   transition: all 1s ease-in-out;
+ /*   transform: skewX(10deg); */
+ }
+ 
+ .sm{
+     flex-grow: 0!important;
+     /* flex-shrink: 10!important; */
+     max-width: 8vw;
+ }
+ 
+ .md{
+     flex-grow: 6!important;
+ }
+
+ .lg{
+   flex-grow: 20!important;
+}
+
+.textSpacer{
+   box-sizing: border-box;
+   flex-grow: 8!important;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+}
+
+.textSpacer > p, .textSpacer > h1{
+   width: 75%;
+   margin: auto;
+}
+
+.posterWrap{
+   cursor: pointer;
+   flex-shrink: 0;
+   flex-grow: 0;
+   flex-basis: 200px;
+   min-height: 45vh;
+   display: inline-block;
+   border: 1px solid var(--black);
+   transition: all 1s ease-in-out;
+}
+
+.nonHover{
+   opacity: 1;
+   transition: opacity .5s ease-in-out;
+}
+
+.posterWrap:hover{
+   flex-basis: 24vw;
+}
+
+.posterWrap > img{
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   height: 100%;
+}
+
+@media (max-width: 966px) {
+   .galleryRow{
+      flex-wrap: wrap;
+   }
+
+   .spacer{
+      flex-basis: 28vw;
+   }
+
+   .sm{
+      max-width: 50vw;
+   }
+
+   .posterWrap:hover{
+      flex-basis: 27vw;
+   }
+}
+
+@media (max-width: 868px) {
+
+   .spacer{
+      flex-basis: 35vw;
+   }
+
+   .sm{
+      max-width: 15vw;
+   }
+
+   .md{
+      flex-basis: 20vw;
+   }
+
+   .posterWrap:hover{
+      flex-basis: 30vw;
+   }
+   .textSpacer{
+      flex-basis: 40vw;
+   }
+   .lastSpacer{
+      flex-basis: 35vw!important;
+   }
+}

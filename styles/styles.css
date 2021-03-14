@@ -1,0 +1,183 @@
+
+/* Import Akzidenz Grotesque Light, Light Italic, and Regular and Avenue X */
+
+@font-face {
+   font-family: 'akzidenzLt';
+   src: url(../fonts/akzidenz/AkzidenzGroteskPro-Light.ttf);
+ }
+
+ @font-face {
+   font-family: 'akzidenzLtIt';
+   src: url(../fonts/akzidenz/AkzidenzGroteskPro-LightIt.ttf);
+ }
+
+ @font-face {
+   font-family: 'akzidenzReg';
+   src: url(../fonts/akzidenz/AkzidenzGroteskPro-Regular.ttf);
+ }
+
+ @font-face {
+   font-family: 'avenuex';
+   src: url(../fonts/avenue/Avenue\ X.otf);
+ }
+
+/* Set variables */
+
+:root{
+   --black: #241f21;
+   --white: #f7f7f7;
+   --aqua: #8af5f2;
+   --blue: #5c08ff;
+   --green: #46F498;
+   --yellow: #f5eb4a;
+   --border: 1px solid var(--black);
+}
+
+/* general styles for the whole site ---------------------------------------------- */
+
+body{
+   margin: 0;
+   background: var(--white);
+   /* cursor: url('../images/testCursor28-150.png'), pointer; */
+}
+
+h1{
+   font-family: 'avenuex';
+   text-transform: uppercase;
+   font-size: 1.65em;
+   letter-spacing: 0.05em;
+}
+
+h2{
+   font-family: 'akzidenzLtIt';
+   text-transform: uppercase;
+   letter-spacing: 0.08em;
+}
+
+p{
+   font-family: 'akzidenzReg';
+   font-size: 0.8em;
+}
+
+a{
+   font-family: 'akzidenzReg'; 
+   font-family: 'akzidenzLtIt';
+   font-size: 1em;
+   color: var(--black);
+}
+
+
+/* individual styles ---------------------------------------------- */
+
+.pageWrap{
+   width: 95vw;
+   display: flex;
+   flex-wrap: wrap;
+   align-content: stretch;
+   border-right: var(--border);
+}
+
+.posterLinksWrap{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   flex-grow: 10;
+   flex-shrink: 5;
+   box-sizing: border-box;
+   min-width: 30vw;
+   border-bottom: none;
+}
+
+.workWrap{
+   display: flex;
+   flex-wrap: wrap;
+   height: 100vh;
+   width: 100vh;
+}
+
+.topWork, .bottomWork{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.work1, .work2, .work3, .bio{
+   border: var(--border);
+   width: 50vh;
+   height: 50vh;
+   box-sizing: border-box;
+}
+
+.bio{
+   padding: 4em;
+}
+
+#work1, #work2, #work3{
+   width: 100%;
+}
+
+#name{
+   margin-top: 0;
+}
+
+#poster{
+   width: 20vw;
+   border: var(--border);
+}
+
+.linksWrap{
+   width: 20vw;
+   margin-top: 30px;
+}
+
+#insta > img, #linkedin > img{
+   width: 30px;
+   margin-top: 10px;
+}
+
+
+@media (max-width: 530px) {
+   .work1, .work2, .work3, .bio{
+      width: 40vh;
+      height: 40vh;
+   }
+
+   #poster{
+      width: 40vh;
+   }
+}
+
+@media (max-width: 1019px) {
+   .pageWrap{
+      justify-content: space-around;
+      padding-bottom: 200px;
+   }
+
+   #poster{
+      width: 30vw;
+   }
+}
+
+@media (max-width: 692px) {
+   .workWrap{
+      height: max-content;
+   }
+
+   .work1, .work2, .work3, .bio{
+      margin-top: 25px;
+   }
+
+   .topWork, .bottomWork{
+      justify-content: space-around;
+   }
+
+   .pageWrap{
+      justify-content: space-around;
+      padding-bottom: 200px;
+   }
+
+   #poster{
+      width: 50vh;
+   }
+}
