@@ -127,7 +127,7 @@
    }
 
    .spacer{
-      flex-basis: 28vw;
+      flex-basis: 29vw;
    }
 
    .sm{
@@ -136,6 +136,12 @@
 
    .posterWrap:hover{
       flex-basis: 27vw;
+   }
+}
+
+@media (max-width: 927px) {
+   .glitchSpacer{
+      flex-basis: 25vw;
    }
 }
 
@@ -154,12 +160,32 @@
    }
 
    .posterWrap:hover{
-      flex-basis: 30vw;
+      flex-basis: 32vw;
    }
    .textSpacer{
       flex-basis: 40vw;
    }
    .lastSpacer{
       flex-basis: 35vw!important;
+   }
+}
+
+@media (max-width: 765px) {
+   .textSpacer{
+      flex-basis: 47vw;
+   }
+}
+
+@media (max-width: 685px) {
+   .glitchSpacer{
+      flex-basis: 20vw;
+   }
+
+   .md{
+      flex-basis: 10vw;
+   }
+
+   .posterWrap:hover{
+      flex-basis: 35vw;
    }
 }
