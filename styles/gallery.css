@@ -165,6 +165,10 @@
     .spacer5{
       flex-basis: 18vw;
    }
+
+   .spacer4{
+      flex-basis: 5vw;
+   }
 }
 
 @media (max-width: 895px) {
@@ -216,7 +220,7 @@
    }
 
    .spacer8{
-      flex-basis: 12vw;
+      flex-basis: 5vw;
    }
 }
 
@@ -262,6 +266,10 @@
       flex-basis: 18vw;
    }
 
+   .spacer9{
+      flex-basis: 5vw;
+   }
+
    .spacer6{
       flex-basis: 20vw;
    }
@@ -275,7 +283,7 @@
    }
 
    .lastSpacer{
-      flex-basis: 25vw;
+      flex-basis: 20vw;
    }
 }
 
@@ -297,6 +305,10 @@
 
     .spacer9{
       flex-basis: 50vw;
+   }
+
+   .lastSpacer{
+      flex-basis: 10vw;
    }
 }
 
@@ -322,6 +334,10 @@
 
     .spacer9{
       flex-basis: 25vw;
+   }
+
+   .lastSpacer{
+      flex-basis: 4vw;
    }
 }
 
