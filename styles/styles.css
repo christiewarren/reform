@@ -66,11 +66,84 @@ a{
    color: var(--black);
 }
 
+#menuWrap{
+   width: 100vw;
+   height: 100vh;
+}
+
+.menuBtnWrap{
+   position: absolute;
+   top: 1.5vw;
+   right: 1.5vw;
+}
+
+#menuBtn{
+   background: var(--black);
+   width: 40px;
+   height: 40px;
+   position: relative;
+   cursor: pointer;
+   transition: all 0.2s;
+}
+
+.verticalWrap, .horizontalWrap{
+   display: flex;
+   position: absolute;
+   top: 0;
+   left: 0;
+   justify-content: space-evenly;
+   width: 40px;
+   height: 40px;
+   align-items: center;
+}
+
+.horizontalWrap{
+   transform: rotate(90deg);
+}
+
+.verticalWrap > span, .horizontalWrap > span{
+   background: var(--white);
+   width: 2px;
+   height: 40px;
+   display: inline-block;
+   transition: all 0.2s; 
+}
+
+@media (hover: hover) {
+   #menuBtn:hover > .verticalWrap > span, #menuBtn:hover > .horizontalWrap:hover > span{
+      height: 8px;
+   }
+   
+   #menuBtn:hover > .verticalWrap > span:nth-child(2), #menuBtn:hover > .horizontalWrap:hover > span:nth-child(3){
+      height: 20px;
+      background: var(--blue);
+      margin-top: -15px;
+   }
+   
+   #menuBtn:hover > .verticalWrap > span:nth-child(1){
+      height: 17px;
+      background: var(--aqua);
+      margin-top: -15px;
+   }
+   
+   #menuBtn:hover > .verticalWrap > span:nth-child(3), #menuBtn:hover > .horizontalWrap:hover > span:nth-child(1){
+      height: 23px;
+      background: var(--green);
+      margin-top: 15px;
+   }
+   
+   #menuBtn:hover > .horizontalWrap:hover > span:nth-child(2){
+      height: 15px;
+      background: var(--yellow);
+   }
+   
+ }
+
 
 /* individual styles ---------------------------------------------- */
 
 .pageWrap{
-   width: 95vw;
+   width: 94vw;
    display: flex;
    flex-wrap: wrap;
    align-content: stretch;
