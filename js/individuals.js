@@ -9,10 +9,10 @@ class individual {
       this.siteLink = "https://" + site;
       this.site = site;
       this.uniqueId = uniqueId;
-      this.poster = './images/posters/' + uniqueId + '.jpg';
-      this.work1 = './images/individuals/' + uniqueId + '/' + work1;
-      this.work2 = './images/individuals/' + uniqueId + '/' + work2;
-      this.work3 = './images/individuals/' + uniqueId + '/' + work3;
+      this.poster = '../images/posters/' + uniqueId + '.jpg';
+      this.work1 = '../images/individuals/' + uniqueId + '/' + work1;
+      this.work2 = '../images/individuals/' + uniqueId + '/' + work2;
+      this.work3 = '../images/individuals/' + uniqueId + '/' + work3;
       this.bio = bio;
    }
 }
