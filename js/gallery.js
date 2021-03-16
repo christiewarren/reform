@@ -55,3 +55,70 @@ document.addEventListener('DOMContentLoaded', () => {
    resetAvailablePosters();
    displayPostersRandomly();
  });
+
+//hover posters 
+const smSpacers = Array.from(document.getElementsByClassName('sm')),
+      mdSpacers = Array.from(document.getElementsByClassName('md')),
+      lgSpacers = Array.from(document.getElementsByClassName('lg')),
+      allSpacers = Array.from(document.getElementsByClassName('spacer'));
+
+let nonHovered = document.getElementsByClassName('nonHover');
+
+//decrease width of each spacer
+// function shrinkSpacerWidths(spacerArray){
+//    spacerArray.forEach((element) => {
+//       element.offsetWidth -= 200;
+//    })
+// }
+
+// function unShrinkSpacerWidths(spacerArray){
+//    spacerArray.forEach((element) => {
+//       element.offsetWidth += 20;
+//    })
+// }
+
+function addHoverListenerToPosters(){
+   Array.from(nonHovered).forEach((element) => {
+      element.addEventListener("mouseover", function( event ) {
+         // highlight the mouseover target
+         event.target.classList.remove('nonHover');
+         
+         hideNonHoveredPosters();
+      });
+   });
+}
+
+function addNonHoverClass(){
+   Array.from(nonHovered).forEach((element) => {
+      element.addEventListener("mouseout", function( event ) {
+         // highlight the mouseover target
+         event.target.classList.add('nonHover');
+         
+         showNonHoveredPosters();
+      });
+   });
+}
+
+function hideNonHoveredPosters(){
+   Array.from(nonHovered).forEach((element) => {
+      element.style.opacity = '0.25';
+      element.style.flexBasis = '150px'
+   });
+   // shrinkSpacerWidths(allSpacers);
+}
+
+function showNonHoveredPosters(){
+   Array.from(nonHovered).forEach((element) => {
+      element.style.opacity = '1';
+   });
+   // unShrinkSpacerWidths(allSpacers);
+}
+
+function addListeners(){
+   addHoverListenerToPosters();
+   addNonHoverClass();
+}
+
+document.addEventListener('DOMContentLoaded', addListeners);
+
+//window.onload = addListeners;
