@@ -48,6 +48,8 @@
    display: flex;
    flex-wrap: wrap;
    border-bottom: 1px solid black;
+   border-top: 1px solid black;
+   margin-top: 12vh;
    /* animation: skewIntro 1.5s ease-in-out forwards; */
  }
  
