@@ -188,7 +188,14 @@ a{
 }
 
 .bio{
-   padding: 4em;
+   display: grid;
+   place-content: center;
+}
+
+#bio{
+   max-width: 75%;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 #work1, #work2, #work3{
@@ -215,16 +222,6 @@ a{
 }
 
 
-@media (max-width: 530px) {
-   .work1, .work2, .work3, .bio{
-      width: 40vh;
-      height: 40vh;
-   }
-
-   #poster{
-      width: 40vh;
-   }
-}
 
 @media (max-width: 1019px) {
    .pageWrap{
@@ -235,15 +232,18 @@ a{
    #poster{
       width: 30vw;
    }
+   
 }
 
-@media (max-width: 692px) {
+@media (max-width: 705px) {
    .workWrap{
       height: max-content;
    }
 
    .work1, .work2, .work3, .bio{
       margin-top: 25px;
+      height: 60vw;
+      width: 60vw;
    }
 
    .topWork, .bottomWork{
@@ -257,5 +257,15 @@ a{
 
    #poster{
       width: 50vh;
+      max-width: 75%;
+   }
+}
+
+@media (max-width: 564px) {
+
+   .work1, .work2, .work3, .bio{
+      margin-top: 25px;
+      height: 75vw;
+      width: 75vw;
    }
 }
