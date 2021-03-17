@@ -1,0 +1,333 @@
+/* Set variables */
+
+:root{
+   --black: #241f21;
+   --white: #f7f7f7;
+   --aqua: #8af5f2;
+   --blue: #5c08ff;
+   --green: #46F498;
+   --yellow: #f5eb4a;
+   --border: 1px solid var(--black);
+}
+
+/* landing page styles ------------------------------------------- */
+#landing{
+   display: flex;
+   flex-direction: row;
+   height: 100vh;
+}
+
+#landing-content{
+   margin: auto;
+}
+
+#landing-animation{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-height: 60vh;
+}
+
+#landing-logo{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   max-height: 20vh;
+}
+
+.concept{
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+   border-top: 3px solid var(--black);
+   border-bottom: 3px solid var(--black);
+}
+
+.column-1{
+   width: 49%;
+   overflow: hidden;
+   border-right: 3px solid var(--black);
+}
+
+.column-1 img{
+   margin: auto;
+}
+
+.column-2{
+   width: 50%;
+}
+
+.concept-text{
+   width: 58%;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 300px;
+}
+
+/* media queries --------------------- */
+
+@media screen and (max-height: 700px){ 
+   .concept-text{
+      margin-top: 250px;
+   } 
+}
+
+@media screen and (max-height: 600px){ 
+   .concept-text{
+      margin-top: 200px;
+   }  
+}
+
+@media screen and (max-width: 670px){ 
+   #landing-animation{
+      max-width: 95%;
+   }   
+      
+   .concept{
+      flex-wrap: wrap;
+   }
+      
+   .column-1{
+      width: 100%;
+      height: 50vh;
+      border-right: none;
+      border-bottom: 3px solid var(--black);
+   }
+      
+   .column-2{
+      width: 100%;
+      height: 50vh;
+   }
+      
+   .concept-text{
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 80px;
+   }
+}
+
+@media screen and (max-height: 400px){
+   .concept-text{
+      margin-top: 20px;
+   }
+}
+
+/* Slide animation ------------------------------------------- */
+
+.rectangleWrap{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid var(--black);
+   flex-wrap: wrap;
+ }
+ 
+ .square1Wrap, .square2Wrap{
+   /* change size of puzzle here -------- */
+   width: 60vh;
+   height: 60vh;
+   display: flex;
+   flex-wrap: wrap;
+ }
+ 
+ .square2Wrap{
+   transform: rotate(-270deg);
+ }
+ 
+ .quad1, .quad2, .quad3, .quad4{
+   display: flex;
+   flex-wrap: wrap;
+   width: 50%;
+   height: 50%;
+ }
+ 
+ .quad2{
+   transform: rotate(180deg);
+ }
+ 
+ .quad3{
+   transform: rotate(-90deg);
+ }
+ 
+ .quad4{
+   transform: rotate(90deg);
+ }
+ 
+ .quad1 > div,.quad2 > div, .quad3 > div,.quad4 > div{
+   border: 2px solid var(--white);
+   width: 50%;
+   height: 50%;
+   box-sizing: border-box;
+   background: transparent;
+ }
+ 
+ .square1{
+   animation: slideSquare1 28s ease-in-out infinite;
+ }
+ 
+ .square2{
+   animation: slideSquare2 28s ease-in-out infinite;
+ }
+ 
+ .square4{
+   animation: slideSquare4 28s ease-in-out infinite;
+ }
+ 
+ 
+ @keyframes slideSquare4{
+   0%{
+     transform: translate(0vh, 0vh);
+   }
+   7.692%{
+     transform: translate(-100%, 0vh);
+   }
+   15.384%{
+     transform: translate(-100%, 0vh);
+   }
+   23.076%{
+     transform: translate(-100%, 0vh);
+   }
+   30.768%{
+     transform: translate(-100%, 0vh);
+   }
+   38.46%{
+     transform: translate(-100%, -100%);
+   }
+   46.152%{
+     transform: translate(-100%, -100%);
+   }
+   53.844%{
+     transform: translate(-100%, -100%);
+   }
+   61.536%{
+     transform: translate(0vh, -100%);
+   }
+   69.228%{
+     transform: translate(0vh, -100%);
+   }
+   76.92%{
+     transform: translate(0vh, -100%);
+   }
+   84.612%{
+     transform: translate(0vh, 0vh);
+   }
+   92.304%{
+     transform: translate(0vh, 0vh);
+   }
+   100%{
+     transform: translate(0vh, 0vh);
+   }
+ }
+ 
+ @keyframes slideSquare2{
+   0%{
+     transform: translate(0vh, 0vh);
+   }
+   7.692%{
+     transform: translate(0vh, 0vh);
+   }
+   15.384%{
+     transform: translate(0vh, 0vh);
+   }
+   23.076%{
+     transform: translate(0vh, 100%);
+   }
+   30.768%{
+     transform: translate(0vh, 100%);
+   }
+   38.46%{
+     transform: translate(0vh, 100%);
+   }
+   46.152%{
+     transform: translate(-100%, 100%);
+   }
+   53.844%{
+     transform: translate(-100%, 100%);
+   }
+   61.536%{
+     transform: translate(-100%, 100%);
+   }
+   69.228%{
+     transform: translate(-100%, 0vh);
+   }
+   76.92%{
+     transform: translate(-100%, 0vh);
+   }
+   84.612%{
+     transform: translate(-100%, 0vh);
+   }
+   92.304%{
+     transform: translate(0vh, 0vh);
+   }
+   100%{
+     transform: translate(0vh, 0vh);
+   }
+ }
+ 
+ @keyframes slideSquare1{
+   0%{
+     transform: translate(0vh, 0vh);
+   }
+   7.692%{
+     transform: translate(0vh, 0vh);
+   }
+   15.384%{
+     transform: translate(0vh, 0vh);
+   }
+   23.076%{
+     transform: translate(0vh, 0vh);
+   }
+   30.768%{
+     transform: translate(100%, 0vh);
+   }
+   38.46%{
+     transform: translate(100%, 0vh);
+   }
+   46.152%{
+     transform: translate(100%, 0vh);
+   }
+   53.844%{
+     transform: translate(100%, 100%);
+   }
+   61.536%{
+     transform: translate(100%, 100%);
+   }
+   69.228%{
+     transform: translate(100%, 100%);
+   }
+   76.92%{
+     transform: translate(0vh, 100%);
+   }
+   84.612%{
+     transform: translate(0vh, 100%);
+   }
+   92.304%{
+     transform: translate(0vh, 100%);
+   }
+   100%{
+     transform: translate(0vh, 0vh);
+   }
+ }
+ 
+ @media only screen and (max-width: 1035px) {
+   .square1Wrap, .square2Wrap{
+     width: 50vh;
+     height: 50vh;
+   }
+   
+ }
+
+ @media only screen and (max-width: 769px) {
+   .square1Wrap, .square2Wrap{
+     width: 35vh;
+     height: 35vh;
+   }
+   
+   .rectangleWrap{
+     width: 35vh;
+     margin-top: 60px;
+   }
+ }
