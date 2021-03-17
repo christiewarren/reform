@@ -199,6 +199,12 @@ a{
    border-right: 1px solid var(--black);
 }
 
+.backLink{
+   position: absolute;
+   top: 20px;
+   left: 20px;
+}
+
 .workWrap{
    display: flex;
    flex-wrap: wrap;
