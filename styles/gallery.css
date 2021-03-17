@@ -49,7 +49,7 @@
    flex-wrap: wrap;
    border-bottom: 1px solid black;
    border-top: 1px solid black;
-   margin-top: 12vh;
+   margin-top: 6vw;
    /* animation: skewIntro 1.5s ease-in-out forwards; */
  }
  
@@ -124,6 +124,20 @@
    }
 }
 
+/* menu btn media queries */
+@media (max-width: 1035px) {
+   .galleryWrap{
+      margin-top: 12vw;
+   } 
+}
+
+@media (max-width: 480px) {
+   .galleryWrap{
+      margin-top: 16vw;
+   }
+}
+
+/* gallery hover media queries */
 @media (max-width: 1165px) {
    .sm{
       flex-basis: 10vw;

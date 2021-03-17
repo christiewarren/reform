@@ -78,9 +78,8 @@ a{
 }
 
 #menuBtn{
-   background: var(--white);
-   width: 41px;
-   height: 41px;
+   width: 33px;
+   height: 33px;
    position: relative;
    cursor: pointer;
    transition: all 0.2s;
@@ -92,8 +91,8 @@ a{
    top: 0;
    left: 0;
    justify-content: space-evenly;
-   width: 41px;
-   height: 41px;
+   width: 33px;
+   height: 33px;
    align-items: center;
 }
 
@@ -112,7 +111,7 @@ a{
 .verticalWrap > span, .horizontalWrap > span{
    background: var(--black);
    width: 3px;
-   height: 41px;
+   height: 33px;
    display: inline-block;
    border-radius: 0px;
    /* transform-origin: top; */
@@ -121,7 +120,6 @@ a{
 
 @media (hover: hover) {
    #menuBtn:hover > .verticalWrap > span, #menuBtn:hover > .horizontalWrap > span{
-      /* height: 3px; */
       border-radius: 10px;
       transform: scaleY(0.1);
       background: var(--blue);
@@ -144,6 +142,36 @@ a{
    } */
  }
 
+ @media (max-width: 1035px) {
+   .menuBtnWrap{
+      top: 4vw;
+      right: 4vw;
+   }
+   
+   #menuBtn{
+      width: 33px;
+      height: 33px;
+   }
+   
+   .verticalWrap, .horizontalWrap{
+      width: 33px;
+      height: 33px;
+   }
+   
+   .verticalWrap > span, .horizontalWrap > span{
+      width: 3px;
+      height: 33px;
+   }
+   
+}
+
+@media (max-width: 480px) {
+   .menuBtnWrap{
+      top: 5vw;
+      right: 5vw;
+   }
+}
+
 
 /* individual styles ---------------------------------------------- */
 
@@ -153,6 +181,8 @@ a{
    flex-wrap: wrap;
    align-content: stretch;
    border-right: var(--border);
+   justify-content: space-around;
+
 }
 
 .posterLinksWrap{
@@ -166,6 +196,7 @@ a{
    box-sizing: border-box;
    min-width: 30vw;
    border-bottom: none;
+   border-right: 1px solid var(--black);
 }
 
 .workWrap{
@@ -178,6 +209,7 @@ a{
 .topWork, .bottomWork{
    display: flex;
    flex-wrap: wrap;
+   justify-content: space-around;
 }
 
 .work1, .work2, .work3, .bio{
@@ -223,16 +255,29 @@ a{
 
 
 
-@media (max-width: 1019px) {
+@media (max-width: 1035px) {
    .pageWrap{
-      justify-content: space-around;
       padding-bottom: 200px;
+      border-right: none;
    }
 
-   #poster{
+   .posterLinksWrap{
+      border-right: none;
+   }
+
+   #poster, .linksWrap{
       width: 30vw;
    }
    
+}
+
+@media (max-width: 949px) {
+   .pageWrap{
+      justify-content: space-around;
+      padding-bottom: 200px;
+      width: 100vw;
+      margin-top: 45px;
+   }
 }
 
 @media (max-width: 705px) {
@@ -253,9 +298,10 @@ a{
    .pageWrap{
       justify-content: space-around;
       padding-bottom: 200px;
+      margin-top: 35px;
    }
 
-   #poster{
+   #poster, .linksWrap{
       width: 50vh;
       max-width: 75%;
    }
