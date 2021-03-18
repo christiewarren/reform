@@ -4,16 +4,18 @@
 
  @keyframes skewIntro{
    from{
-      transform: skew(0deg, 20deg);
-      margin-top: 20%;
+      transform: skew(5deg, 10deg);
       opacity: 0;
    }
 
    to{
       transform: skew(0deg, 0deg);
-      margin-top: 0;
       opacity: 1;
    }
+ }
+
+ .galleryWrap{
+    animation: skewIntro 1.5s ease-in-out;
  }
 
  .nameListWrap{
@@ -36,6 +38,12 @@
    margin: auto;
    text-align: left;
    margin-top: 0;
+   transform: translateY(80px);
+   transition: all 2s ease-in-out;
+ }
+
+ .nameListOnScroll{
+   transform: translateY(0px);
  }
 
  .nameLink{
@@ -47,8 +55,7 @@
    width: 100vw;
    display: flex;
    flex-wrap: wrap;
-   border-bottom: 1px solid black;
-   border-top: 1px solid black;
+   border: 1px solid black;
    margin-top: 6vw;
    /* animation: skewIntro 1.5s ease-in-out forwards; */
  }
