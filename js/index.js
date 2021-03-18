@@ -1,8 +1,8 @@
-const scroll = new LocomotiveScroll({
-   el: document.querySelector('[data-scroll-container]'),
-   smooth: true,
-   multiplier: 1
-});
+// const scroll = new LocomotiveScroll({
+//    el: document.querySelector('[data-scroll-container]'),
+//    smooth: true,
+//    multiplier: 1
+// });
 
 const menuBtn = document.getElementById('menuBtnWrap'),
       menu = document.getElementById('menuWrap');
