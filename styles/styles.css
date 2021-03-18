@@ -66,15 +66,11 @@ a{
    color: var(--black);
 }
 
-#menuWrap{
-   width: 100vw;
-   height: 100vh;
-}
-
-.menuBtnWrap{
+#menuBtnWrap{
    position: absolute;
    top: 1.5vw;
    right: 1.5vw;
+   z-index: 100;
 }
 
 #menuBtn{
@@ -172,6 +168,20 @@ a{
    }
 }
 
+#menuWrap{
+   width: 100vw;
+   height: 100vh;
+   background: var(--white);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   display: grid;
+   place-content: center;
+   opacity: 0;
+   transform: translateX(100%);
+   transition: all 0.8s ease-in-out;
+}
 
 /* individual styles ---------------------------------------------- */
 

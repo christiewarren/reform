@@ -4,13 +4,15 @@
 
  @keyframes skewIntro{
    from{
-      transform: skew(5deg, 10deg);
+      transform: skew(8deg, 10deg);
       opacity: 0;
+      margin-left: 5%;
    }
 
    to{
       transform: skew(0deg, 0deg);
       opacity: 1;
+      margin-left: 0;
    }
  }
 
