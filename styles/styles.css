@@ -43,7 +43,6 @@ body{
 }
 
 .pageWrap{
-   position: relative;
 }
 
 h1{
@@ -340,4 +339,69 @@ a{
    h1{
       letter-spacing: -.03em;
    }
+}
+
+/* Process page ------------------------------------------ */
+.processPageWrap{
+   display: flex;
+   align-content: stretch;
+   border-right: var(--border);
+   justify-content: space-around;
+   overflow-x: scroll;
+   width: fit-content;
+}
+
+.butterProcess{
+   overflow-x: scroll;
+}
+
+.processIntroWrap{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-sizing: border-box;
+   width: 25vw;
+   min-width: 500px;
+   flex-grow: 1;
+   border-bottom: none;
+   border-right: 1px solid var(--black);
+}
+
+.processIntroWrap > h1, .processIntroWrap > p{
+   width: 50%;
+}
+
+.processWrap{
+   display: flex;
+   height: 100vh;
+   flex-wrap: wrap;
+}
+
+.topProcess, .bottomProcess{
+   display: flex;
+   justify-content: space-around;
+}
+
+.processPicWrap, .processCaptionWrap{
+   border: var(--border);
+   width: 50vh;
+   height: 50vh;
+   box-sizing: border-box;
+}
+
+.processPic{
+   width: 100%;
+}
+
+.processCaptionWrap{
+   display: grid;
+   place-content: center;
+}
+
+.processCaption{
+   max-width: 75%;
+   margin-left: auto;
+   margin-right: auto;
 }

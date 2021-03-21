@@ -4,11 +4,6 @@
 //    multiplier: 1
 // });
 
-//init butter.js
-// var canvas = document.getElementById('butterCanvas');
-// var butter = new Butter();
-// butter.sort(canvas);
-
 //show and hide menu
 const menuBtn = document.getElementById('menuBtnWrap'),
       menu = document.getElementById('menuWrap');
