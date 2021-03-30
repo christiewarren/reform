@@ -194,7 +194,6 @@ a{
    align-content: stretch;
    border-right: var(--border);
    justify-content: space-around;
-
 }
 
 .posterLinksWrap{
@@ -271,7 +270,36 @@ a{
    margin-top: 10px;
 }
 
+#personNavWrap{
+   height: 100vh;
+   display: flex;
+}
 
+#prevNav, #nextNav{
+   width: 50vw;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 8vw;
+   border: var(--border);
+   cursor: pointer;
+}
+
+#previousImg{
+   margin-left: auto;
+}
+
+.navPreviewImg{
+   width: 4vw;
+   display: block;
+   margin-bottom: 5vh;
+}
+
+#prevBtn, #nextBtn{
+   width: 2vw;
+   display: block;
+}
 
 @media (max-width: 1035px) {
    #individualPageWrap{
