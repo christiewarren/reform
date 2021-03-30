@@ -14,11 +14,12 @@ class individual {
       this.work2 = '../images/individuals/' + uniqueId + '/' + work2;
       this.work3 = '../images/individuals/' + uniqueId + '/' + work3;
       this.bio = bio;
+      this.cursor = '../images/cursors/' + uniqueId + 'Cursor.png';
    }
 }
 
 const  
-      abby = new individual('abby', 'blend', 'abby-blend-96a363198', 'abbyblendart', 'abbyblend.com', 'work1', 'champs.jpg', 'foreverUSA.gif', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. <br><br>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in repreh enderit in voluptate velit esse cillum dolore eu fugiat nulla. Dipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 'abby'),
+      abby = new individual('abby', 'blend', 'abby-blend-96a363198', 'abbyblendart', 'abbyblend.com', 'work1', 'champs.jpg', 'foreverUSA.gif', 'Hello, I’m Abby! Whether I am designing for websites, packaging, or motion, my goal is to provide an experience for the audience. After graduation, I hope to pursue a career in branding or UI/UX. <br><br>Inspired by my appreciation for and experience with tactile design elements, I created this poster to represent the grid in a physical space. I used a punch needling technique to produce gridded shapes with stimulating textures.', 'abby'),
 
       dani = new individual('danielle', 'berman', '', 'daniberman.dzn', 'daniberman.com', 'posters.gif', 'converse.gif', 'wmag.gif', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. <br><br>Exercitation ullamco laboris nisi ut aliquip ex ea com modo consequat. Duis aute irure dolor in repreh enderit in voluptate velit esse cillum dolore eu fugiat nulla. Dipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua', 'dani'),
 
@@ -83,7 +84,8 @@ const fullName = document.getElementById('name'),
       work1 = document.getElementById('work1'),
       work2 = document.getElementById('work2'),
       work3 = document.getElementById('work3'),
-      bio = document.getElementById('bio');
+      bio = document.getElementById('bio'),
+      individualPageWrap = document.getElementById('individualPageWrap');
 
 function loadIndividualInfo(individual){
    //fullName.innerHTML = individual.name;
@@ -96,8 +98,8 @@ function loadIndividualInfo(individual){
    work2.src = individual.work2;
    work3.src = individual.work3;
    bio.innerHTML = individual.bio;
+   individualPageWrap.style.cursor = 'url("../images/' + individual.cursor + '"), pointer';
 }
-
 
 function getSelectedPoster(){
    let params = new URLSearchParams(document.location.search.substring(1));

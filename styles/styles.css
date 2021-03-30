@@ -38,11 +38,8 @@
 body{
    margin: 0;
    background: var(--white);
-   /* cursor: url('../images/testCursor28-150.png'), pointer; */
+   /* cursor: url('../images/snake12-02.png'), pointer; */
    scroll-behavior: smooth;
-}
-
-.pageWrap{
 }
 
 h1{
@@ -60,7 +57,7 @@ h2{
 
 p{
    font-family: 'akzidenzReg';
-   font-size: 0.8em;
+   font-size: 0.84em;
 }
 
 a{
@@ -190,7 +187,7 @@ a{
 
 /* individual styles ---------------------------------------------- */
 
-.individualPageWrap{
+#individualPageWrap{
    width: 94vw;
    display: flex;
    flex-wrap: wrap;
@@ -277,7 +274,7 @@ a{
 
 
 @media (max-width: 1035px) {
-   .individualPageWrap{
+   #individualPageWrap{
       padding-bottom: 200px;
       border-right: none;
    }
@@ -293,7 +290,7 @@ a{
 }
 
 @media (max-width: 949px) {
-   .individualPageWrap{
+   #individualPageWrap{
       justify-content: space-around;
       padding-bottom: 200px;
       width: 100vw;
@@ -316,7 +313,7 @@ a{
       justify-content: space-around;
    }
 
-   .individualPageWrap{
+   #individualPageWrap{
       justify-content: space-around;
       padding-bottom: 200px;
       margin-top: 35px;
@@ -345,10 +342,10 @@ a{
 .processPageWrap{
    display: flex;
    align-content: stretch;
-   border-right: var(--border);
    justify-content: space-around;
    overflow-x: scroll;
    width: fit-content;
+   padding-right: 6vw;
 }
 
 .butterProcess{
@@ -362,8 +359,8 @@ a{
    align-items: center;
    justify-content: center;
    box-sizing: border-box;
-   width: 25vw;
-   min-width: 500px;
+   width: 40vw;
+   flex-shrink: 0;   
    flex-grow: 1;
    border-bottom: none;
    border-right: 1px solid var(--black);
@@ -377,6 +374,7 @@ a{
    display: flex;
    height: 100vh;
    flex-wrap: wrap;
+   border-right: 1px solid var(--black);
 }
 
 .topProcess, .bottomProcess{
