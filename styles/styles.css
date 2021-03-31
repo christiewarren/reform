@@ -275,7 +275,7 @@ a{
    display: flex;
 }
 
-#prevNav, #nextNav{
+#previousNav, #nextNav{
    width: 50vw;
    box-sizing: border-box;
    display: flex;
@@ -288,6 +288,10 @@ a{
 
 #previousImg{
    margin-left: auto;
+}
+
+#previousName{
+   text-align: right;
 }
 
 .navPreviewImg{

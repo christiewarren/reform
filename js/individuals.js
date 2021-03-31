@@ -18,6 +18,7 @@ class individual {
       this.cover1 = '../images/individuals/' + uniqueId + '/' + cover1;
       this.cover2 = '../images/individuals/' + uniqueId + '/' + cover2;
       this.cover3 = '../images/individuals/' + uniqueId + '/' + cover3;
+      this.fullQueryStr = 'name=' + uniqueId;
    }
 }
 
@@ -117,6 +118,7 @@ function loadIndividualInfo(individual){
    }
    
    checkForGifs(individual);
+   getNavIndividuals(individual);
 }
 
 let selectedPoster;
@@ -137,6 +139,53 @@ function getSelectedIndividual(selectedPoster){
 
 
 document.addEventListener('DOMContentLoaded', getSelectedPoster);
+
+let nextIndividual;
+let previousIndividual;
+const previousPersonImage = document.getElementById('previousImg'),
+      nextPersonImage = document.getElementById('nextImg'),
+      previousName = document.getElementById('previousName'),
+      nextName = document.getElementById('nextName'),
+      previousNavBtn = document.getElementById('previousNav'),
+      nextNavBtn = document.getElementById('nextNav');
+
+
+function getNavIndividuals(individual) {
+   getPreviousIndividual(individual);
+   getNextIndividual(individual);
+   loadPersonNavInfo();
+}
+
+function getPreviousIndividual(individual){
+   if(individuals.indexOf(individual) == 0){
+      previousIndividual = individuals[17];
+   }else{
+      previousIndividual = individuals[individuals.indexOf(individual)-1];
+   }
+   addLinkToPersonNav(previousNavBtn, previousIndividual);
+}
+
+function getNextIndividual(individual){
+   if(individuals.indexOf(individual) == 17){
+      nextIndividual = individuals[0];
+   }else{
+      nextIndividual = individuals[individuals.indexOf(individual)+1];
+   }
+   addLinkToPersonNav(nextNavBtn, nextIndividual);
+}
+
+function loadPersonNavInfo(){
+   previousName.innerHTML = previousIndividual.fName + '<br>' + previousIndividual.lName;
+   nextName.innerHTML = nextIndividual.fName + '<br>' + nextIndividual.lName;
+}
+
+function addLinkToPersonNav(navBtn, navIndividual){
+   navBtn.addEventListener('click', () => {
+      urlSearchParam = new URLSearchParams(navIndividual.fullQueryStr);
+      window.location = './individual.html?' + urlSearchParam;
+   })
+}
+
 
 let workImgs = Array.from(document.getElementsByClassName('workImg'));
 
@@ -174,3 +223,4 @@ function addMouseOutListener(img, individual){
       }
    })
 }
+
