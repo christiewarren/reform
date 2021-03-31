@@ -234,6 +234,7 @@ a{
    width: 50vh;
    height: 50vh;
    box-sizing: border-box;
+   position: relative;
 }
 
 .bio{
@@ -249,6 +250,26 @@ a{
 
 #work1, #work2, #work3{
    width: 100%;
+}
+
+.coverImg{
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: -10;
+}
+
+@media (hover: hover) {
+   .coverImg{
+      opacity: 1;
+      z-index: 10;
+   }
+
+   .coverImg:hover{
+      opacity: 0;
+   }
 }
 
 #name{
