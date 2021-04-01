@@ -119,7 +119,8 @@ function addNonHoverClass(){
 function hideNonHoveredPosters(){
    Array.from(nonHovered).forEach((element) => {
       element.style.opacity = '0.25';
-      element.style.flexBasis = '150px'
+      element.style.flexBasis = '20vh';
+      //element.style.filter = 'blur(3px)';
    });
    // shrinkSpacerWidths(allSpacers);
 }
@@ -127,6 +128,7 @@ function hideNonHoveredPosters(){
 function showNonHoveredPosters(){
    Array.from(nonHovered).forEach((element) => {
       element.style.opacity = '1';
+      element.style.filter = 'blur(0px)';
    });
    // unShrinkSpacerWidths(allSpacers);
 }

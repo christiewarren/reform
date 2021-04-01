@@ -40,6 +40,13 @@ body{
    background: var(--white);
    /* cursor: url('../images/snake12-02.png'), pointer; */
    scroll-behavior: smooth;
+   position: relative;
+}
+
+#customCursor{
+   position: fixed;
+   width: 2.8rem;
+   pointer-events: none;
 }
 
 h1{

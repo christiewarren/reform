@@ -113,7 +113,7 @@
 
 .nonHover{
    opacity: 1;
-   transition: opacity .5s ease-in-out;
+   transition: opacity .5s ease-in-out, filter .5s ease-in-out;
 }
 
 .posterWrap > img{
