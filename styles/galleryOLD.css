@@ -53,14 +53,9 @@
    width: 100vw;
    display: flex;
    flex-wrap: wrap;
-   flex-direction: column;
    border: 1px solid black;
    margin-top: 6vw;
    /* animation: skewIntro 1.5s ease-in-out forwards; */
- }
-
- .galleryRow{
-    display: flex;
  }
  
  .spacer{
@@ -131,82 +126,6 @@
 @media (hover: hover) {
    .posterWrap:hover{
       flex-basis: 24vw;
-   }
-}
-
-#galleryWrapXl{
-   display: flex;
-}
-
-#galleryWrapLg{
-   display: none;
-}
-
-#galleryWrapMd{
-   display: none;
-}
-
-#galleryWrapSm{
-   display: none;
-}
-
-#galleryWrapXs{
-   display: none;
-}
-
-#galleryWrapXxs{
-   display: none;
-}
-
-@media (max-width: 1108px) {
-   #galleryWrapXl{
-      display: none;
-   }
-   
-   #galleryWrapLg{
-      display: flex;
-   }
-}
-
-@media (max-width: 869px) {
-   #galleryWrapLg{
-      display: none;
-   }
-
-   #galleryWrapMd{
-      display: flex;
-   }
-}
-
-@media (max-width: 656px) {
-   #galleryWrapMd{
-      display: none;
-   }
-
-   #galleryWrapSm{
-      display: flex;
-   }
-}
-
-@media (max-width: 515px) {
-
-   #galleryWrapSm{
-      display: none;
-   }
-
-   #galleryWrapXs{
-      display: flex;
-   }
-}
-
-@media (max-width: 450px) {
-
-   #galleryWrapXs{
-      display: none;
-   }
-
-   #galleryWrapXxs{
-      display: flex;
    }
 }
 

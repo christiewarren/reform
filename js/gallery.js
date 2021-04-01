@@ -2,7 +2,23 @@
 // for each img tag set the src to a random image from the poster array and remove that image from the array
 // on window load reset the array to include all images
 
-const posterSlots = Array.from(document.getElementsByClassName('poster'));
+let posterSlots = [];
+
+function getPosterSlots(){
+   if(window.innerWidth > 1108){
+      posterSlots = Array.from(document.getElementsByClassName('posterXl'))
+   }else if(window.innerWidth > 869){
+      posterSlots = Array.from(document.getElementsByClassName('posterLg'))
+   }else if(window.innerWidth > 656){
+      posterSlots = Array.from(document.getElementsByClassName('posterMd'))
+   }else if(window.innerWidth > 515){
+      posterSlots = Array.from(document.getElementsByClassName('posterSm'))
+   }else if(window.innerWidth > 450){
+      posterSlots = Array.from(document.getElementsByClassName('posterXs'))
+   }else{
+      posterSlots = Array.from(document.getElementsByClassName('posterXxs'))
+   }
+}
 
 class person {
    constructor(fileName, queryStr) {
@@ -56,7 +72,7 @@ const posterImgsAndLinks = [
 let availablePosters = [];
 
 function resetAvailablePosters(){
-   availablePosters = posterImgsAndLinks;
+   availablePosters = [...posterImgsAndLinks];
 }
 
 let randomPoster = '';
@@ -86,9 +102,28 @@ function displayPostersRandomly(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+   getPosterSlots();
    resetAvailablePosters();
    displayPostersRandomly();
  });
+
+let xl = window.matchMedia('(max-width: 1108px)');
+let lg = window.matchMedia('(max-width: 869px)');
+let md = window.matchMedia('(max-width: 656px)');
+let sm = window.matchMedia('(max-width: 515px)');
+let xs = window.matchMedia('(max-width: 450px)');
+
+function screenTest() {
+   getPosterSlots();
+   resetAvailablePosters();
+   displayPostersRandomly();
+}
+
+xl.addEventListener('change', screenTest);
+lg.addEventListener('change', screenTest);
+md.addEventListener('change', screenTest);
+sm.addEventListener('change', screenTest);
+xs.addEventListener('change', screenTest);
 
 //hover posters 
 
@@ -146,7 +181,6 @@ function addListeners(){
       addNonHoverClass();
   }
 }
-
 
 document.addEventListener('DOMContentLoaded', addListeners);
 
