@@ -60,6 +60,7 @@ h2{
    font-family: 'akzidenzLtIt';
    text-transform: uppercase;
    letter-spacing: 0.08em;
+   font-size: 1.4rem;
 }
 
 p{
@@ -312,6 +313,7 @@ a{
    padding: 0 8vw;
    border: var(--border);
    cursor: pointer;
+   padding-top: 5vh;
 }
 
 #previousImg{
@@ -356,6 +358,14 @@ a{
       width: 100vw;
       margin-top: 45px;
    }
+
+   #nextBtn, #prevBtn{
+      width: 3vw;
+   }
+
+   .navPreviewImg{
+      width: 6vw;
+   }
 }
 
 @media (max-width: 705px) {
@@ -395,6 +405,22 @@ a{
 
    h1{
       letter-spacing: -.03em;
+   }
+
+   #personNavWrap{
+      height: 35vh;
+   }
+
+   .navPreviewImg{
+      width: 10vw;
+   }
+
+   #nextBtn, #prevBtn{
+      width: 5vw;
+   }
+
+   h2{
+      font-size: 1.1rem;
    }
 }
 
