@@ -36,31 +36,28 @@
 }
 
 .concept{
-   display: flex;
-   flex-direction: row;
-   width: 100%;
-   border-top: 3px solid var(--black);
-   border-bottom: 3px solid var(--black);
-   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-top: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+  box-sizing: border-box;
+}
+
+canvas {
+  display: block;
 }
 
 .column-1{
-   width: 49vw;
-   overflow: hidden;
-   border-right: 3px solid var(--black);
-   height: 100vh;
-   position: sticky;
-   position: -webkit-sticky;
-   top: 0;
+  width: min-content;
+  border-right: 3px solid var(--black);
 }
 
-/* #col1Wrap{
-   width: 49vw;
-   height: 100vh;
-} */
-
-.column-1 img{
-   margin: auto;
+.conceptImg{
+  height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
 
 .concept-text{
@@ -129,12 +126,20 @@
 
 /* Slide animation ------------------------------------------- */
 
+.slideImg{
+  object-fit: contain;
+  width: 100%;
+}
+
 .rectangleWrap{
    display: flex;
    justify-content: center;
    align-items: center;
-   /* border: 2px solid var(--black); */
    flex-wrap: wrap;
+ }
+
+ .noImgSquare{
+   background: var(--black)!important;
  }
  
  .square1Wrap, .square2Wrap{
@@ -145,6 +150,18 @@
    flex-wrap: wrap;
    justify-content: space-around;
  }
+
+ .square1Wrap > .quad2 > div > .slideImg, .square2Wrap > .quad4 > div > .slideImg{
+   transform: rotate(180deg);
+ }
+
+ .square1Wrap > .quad3 > div > .slideImg, .square2Wrap > .quad2 > div > .slideImg{
+  transform: rotate(90deg);
+}
+
+.square1Wrap > .quad4 > div > .slideImg, .square2Wrap > .quad1 > div > .slideImg{
+  transform: rotate(-90deg);
+}
  
  .square2Wrap{
    transform: rotate(-270deg);
