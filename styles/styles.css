@@ -52,7 +52,7 @@ h1{
    font-family: 'avenuex';
    text-transform: uppercase;
    font-size: 1.65em;
-   letter-spacing: .05em;
+   letter-spacing: .02em;
    word-spacing: -0.28em;
 }
 
@@ -100,32 +100,8 @@ a{
    background: var(--white);
 }
 
-.menuLink:hover{
-   transform: skewX(-25deg) scaleX(1.1);
-}
-
-.menuLink:first-child:hover{
-   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(92,8,255,1) 100%);
-}
-
-.menuLink:nth-child(2):hover{
-   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(138,245,242,1) 100%);
-}
-
-.menuLink:nth-child(3):hover{
-   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(70,244,152,1) 100%);
-}
-
-.menuLink:nth-child(4):hover{
-   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(245,235,74,1) 100%);
-}
-
 .menuLink > h1{
    transition: all .5s ease-out;
-}
-
-.menuLink:hover > h1{
-   transform: skewX(24deg) scaleX(0.9);
 }
 
 .verticalWrap, .horizontalWrap{
@@ -162,6 +138,31 @@ a{
 }
 
 @media (hover: hover) {
+
+   .menuLink:hover{
+      transform: skewX(-25deg) scaleX(1.1);
+   }
+   
+   .menuLink:first-child:hover{
+      background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(92,8,255,1) 100%);
+   }
+   
+   .menuLink:nth-child(2):hover{
+      background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(138,245,242,1) 100%);
+   }
+   
+   .menuLink:nth-child(3):hover{
+      background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(70,244,152,1) 100%);
+   }
+   
+   .menuLink:nth-child(4):hover{
+      background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(245,235,74,1) 100%);
+   }
+
+   .menuLink:hover > h1{
+      transform: skewX(24deg) scaleX(0.9);
+   }
+
    #menuBtn:hover > .verticalWrap > span, #menuBtn:hover > .horizontalWrap > span{
       border-radius: 10px;
       transform: scaleY(0.1);
