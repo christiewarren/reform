@@ -90,6 +90,44 @@ a{
    transition: all 0.2s;
 }
 
+.menuLink{
+   border: 2px solid var(--black);
+   padding: 0px 15px;
+   margin-bottom: 15px;
+   width: 30vw;
+   transition: all .5s ease-out;
+   min-width: 250px;
+   background: var(--white);
+}
+
+.menuLink:hover{
+   transform: skewX(-25deg) scaleX(1.1);
+}
+
+.menuLink:first-child:hover{
+   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(92,8,255,1) 100%);
+}
+
+.menuLink:nth-child(2):hover{
+   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(138,245,242,1) 100%);
+}
+
+.menuLink:nth-child(3):hover{
+   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(70,244,152,1) 100%);
+}
+
+.menuLink:nth-child(4):hover{
+   background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgba(245,235,74,1) 100%);
+}
+
+.menuLink > h1{
+   transition: all .5s ease-out;
+}
+
+.menuLink:hover > h1{
+   transform: skewX(24deg) scaleX(0.9);
+}
+
 .verticalWrap, .horizontalWrap{
    display: flex;
    position: absolute;
