@@ -15,6 +15,7 @@
    display: flex;
    flex-direction: row;
    height: 100vh;
+   border-bottom: 3px solid var(--black);
 }
 
 #landing-content{
@@ -39,9 +40,10 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  border-top: 3px solid var(--black);
   border-bottom: 3px solid var(--black);
   box-sizing: border-box;
+  justify-content: center;
+  margin-top: 10vh;
 }
 
 canvas {
@@ -49,15 +51,27 @@ canvas {
 }
 
 .column-1{
-  width: min-content;
-  border-right: 3px solid var(--black);
+  /* width: min-content; */
+  /* border-right: 3px solid var(--black); */
+  width: 45vw;
 }
 
 .conceptImg{
+  width: 100%;
+}
+
+.concept-text:first-child{
+}
+
+.conceptImgWrap{
+  width: 100%;
   height: 100vh;
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 0vh;
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
 }
 
 .concept-text{
@@ -67,15 +81,12 @@ canvas {
    height: 100vh;
    display: flex;
    flex-direction: column;
-   justify-content: flex-start;
-}
-
-.concept-text:first-child{
-   margin-top: 50vh;
+   justify-content: center;
+   /* border: 1px solid blue; */
 }
 
 .conceptTextWrap{
-   width: 50vw;
+  width: 40vw;
 }
 
 [data-aos="conceptTextScroll"] {
@@ -94,21 +105,44 @@ canvas {
    #landing-animation{
       max-width: 95%;
    }   
+
+   #landing{
+     border: none;
+   }
       
    .concept{
       flex-wrap: wrap;
-      margin-top: 150px;
+      flex-direction: row-reverse;
+      position: relative;
    }
       
    .column-1{
-      width: 100%;
-      height: 50vh;
-      border-right: none;
-      border-bottom: 3px solid var(--black);
+      width: 100vw;
    }
-  
+
+   .conceptImgWrap{
+    /* border: 1px solid blue; */
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    top: 0;
+  }
+
+  .conceptImg{
+    height: 50%;
+    width: auto;
+    padding-bottom: 10vh;
+
+  }
+
    .conceptTextWrap{
       width: 100vw;
+      position: absolute;
+      top: 0;
+      background: var(--white);
+      height: 40vh;
+      z-index: -1;
+      align-items: flex-start;
    }
       
    .concept-text{
@@ -117,12 +151,6 @@ canvas {
       margin-right: auto;
    }
 }
-
-/* @media screen and (max-height: 400px){
-   .concept-text{
-      margin-top: 20px;
-   }
-} */
 
 /* Slide animation ------------------------------------------- */
 

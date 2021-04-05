@@ -1,12 +1,26 @@
-let scl = 40;
+let scl = 10;
+
+let htmlCanvas = document.getElementById('canvas');
+let width = htmlCanvas.clientWidth;
+let height = htmlCanvas.clientHeight;
 
 function setup(){
-   createCanvas(600, 600);
+   let canvas = createCanvas(width, height);
+   canvas.parent('canvas');
  }
+
+ function windowResized(){
+  width = htmlCanvas.clientWidth;
+  height = htmlCanvas.clientHeight;
+  resizeCanvas(width,height);
+}
+
+window.onresize = windowResized;
+
  
  function draw(){
-   background(247, 247, 247);
-   stroke(36, 31, 33);
+   stroke(247, 247, 247);
+   background(36, 31, 33);
    noFill();
    frameRate(60);
    strokeWeight(1);

@@ -8,7 +8,7 @@
    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
 
-   <!-- <script src="./js/p5.js"></script> -->
+   <script src="./js/p5.js"></script>
    <!-- Locomotive scroll css -->
    <!-- <link rel="stylesheet" href="./styles/locomotive.css"> -->
    <!-- Locomotive scroll js link -->
@@ -21,6 +21,7 @@
    <link rel="stylesheet" href="./styles/landing.css"> 
 </head>
 <body>
+
   <div id="landing">
     <div id="landing-content">
         <!-- <img id="landing-animation" src="images/concept/grid-animation-placeholder.png" alt="Animated grid of posters" title="Grid Animation"> -->
@@ -29,86 +30,86 @@
           <div class="square1Wrap">
             <div class="quad1">
               <div class="square1 noImgSquare"></div>
-              <div class="square2" style="background: #46F498">
+              <div class="square2">
                 <img src="./images/slidePuzzle/michaela.png" class="slideImg">
               </div>
               <div class="square3"></div>
-              <div class="square4" style="background: #5c08ff">
+              <div class="square4">
                 <img src="./images/slidePuzzle/jackie.png" class="slideImg">
               </div>
             </div>
               <div class="quad2">
-              <div class="square1" style="background: #8af5f2">
+              <div class="square1">
                 <img src="./images/slidePuzzle/taylor.png" class="slideImg">
               </div>
-              <div class="square2" style="background: #241f21">
+              <div class="square2">
                 <img src="./images/slidePuzzle/christie.png" class="slideImg">
               </div>
               <div class="square3"></div>
-              <div class="square4 noImgSquare"></div>
+              <div class="square4 noImgSquare" id="canvas"></div>
             </div>
             <div class="quad3">
-              <div class="square1" style="background: #46F498">
+              <div class="square1">
                 <img src="./images/slidePuzzle/amber.png" class="slideImg">
               </div>
-              <div class="square2" style="background: #5c08ff">
+              <div class="square2">
                 <img src="./images/slidePuzzle/abby.png" class="slideImg">
               </div>
               <div class="square3"></div>
               <div class="square4 noImgSquare"></div>
             </div>
             <div class="quad4">
-              <div class="square1" style="background: #241f21">
-                <img src="./images/slidePuzzle/dani.png" class="slideImg">
+              <div class="square1">
+                <img src="./images/slidePuzzle/ron.png" class="slideImg">
               </div>
               <div class="square2">
                 <img src="./images/slidePuzzle/tamar.png" class="slideImg">
               </div>
               <div class="square3"></div>
-              <div class="square4" style="background: #46F498">
+              <div class="square4">
                 <img src="./images/slidePuzzle/zane.png" class="slideImg"></div>
             </div>
           </div>
           <div class="square2Wrap">
             <div class="quad1">
-              <div class="square1" style="background: #5c08ff">
+              <div class="square1">
                 <img src="./images/slidePuzzle/emp.png" class="slideImg">
               </div>
-              <div class="square2" style="background: #8af5f2">
-                <img src="./images/slidePuzzle/ron.png" class="slideImg">
+              <div class="square2">
+                <img src="./images/slidePuzzle/dani.png" class="slideImg">
               </div>
               <div class="square3"></div>
               <div class="square4 noImgSquare"></div>
             </div>
               <div class="quad2">
-              <div class="square1" style="background: #46F498">
+              <div class="square1">
                 <img src="./images/slidePuzzle/sarah.png" class="slideImg">
               </div>
-              <div class="square2" style="background: #8af5f2">
+              <div class="square2">
                 <img src="./images/slidePuzzle/carly.png" class="slideImg">
               </div>
               <div class="square3"></div>
               <div class="square4 noImgSquare"></div>
             </div>
             <div class="quad3">
-              <div class="square1" style="background: #f5eb4a">
+              <div class="square1">
                 <img src="./images/slidePuzzle/megan.png" class="slideImg">
               </div>
-              <div class="square2" style="background: #46F498">
+              <div class="square2">
                 <img src="./images/slidePuzzle/eileen.png" class="slideImg">
               </div>
               <div class="square3"></div>
-              <div class="square4" style="background: #5c08ff">
+              <div class="square4">
                 <img src="./images/slidePuzzle/sam.png" class="slideImg">
               </div>
             </div>
             <div class="quad4">
-              <div class="square1" style="background: #8af5f2">
+              <div class="square1">
                 <img src="./images/slidePuzzle/emw.png" class="slideImg">
               </div>
-              <div class="square2 noImgSquare" style="background: #241f21"></div>
+              <div class="square2 noImgSquare"></div>
               <div class="square3"></div>
-              <div class="square4" style="background: #f5eb4a">
+              <div class="square4">
                 <img src="./images/slidePuzzle/cassie.png" class="slideImg">
               </div>
             </div>
@@ -122,36 +123,51 @@
   <!-- Hopefully we can target this "about" class to make the scroll animation -->
     <!-- <div id="col1Wrap"> -->
       <div class="column-1">
-        <img src="images/concept/Layer1.jpg" alt="Grid" title="Grid" class="conceptImg">
-        <img src="images/concept/Layer2.png" alt="Grid" title="Grid" class="conceptImg">
-        <img src="images/concept/Layer3.jpg" alt="Grid" title="Grid" class="conceptImg">
-        <div class="manipulationSpacer conceptImg"></div>
-        <img src="images/concept/Layer4.png" alt="Grid" title="Grid" class="conceptImg">
+        <div class="conceptImgWrap" id="conceptImg1">
+          <img src="images/concept/Layer1.jpg" alt="Grid" title="Grid" class="conceptImg">
+        </div>
+        <div class="conceptImgWrap" id="conceptImg2">
+          <img src="images/concept/Layer2.png" alt="Grid" title="Grid" class="conceptImg">
+        </div>
+        <div class="conceptImgWrap" id="conceptImg3">
+          <img src="images/concept/Layer3.jpg" alt="Grid" title="Grid" class="conceptImg">
+        </div>
+        <div class="conceptImgWrap" id="conceptImg4">
+          <div class="manipulationSpacer conceptImg"></div>
+        </div>
+        <div class="conceptImgWrap" id="conceptImg5">
+          <img src="images/concept/Layer4.png" alt="Grid" title="Grid" class="conceptImg">
+        </div>
+        <div class="conceptImgWrap" id="conceptImg6"></div>
       </div>
     <!-- </div> -->
+
     <div class="conceptTextWrap">
-        <div class="concept-text" id="about-1" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-mirror="true">
+        <div class="concept-text" id="about-1" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg1">
             <h1>Re/Form</h1>
             <p>Every designer knows the grid, the structure that supports our work and lives. Re/Form embodies how we interpret that structure and how we adapt as structure changes. It’s our way of showcasing the foundation of our education and how we have built upon that foundation.</p>
         </div> 
-        <div class="concept-text" id="about-2" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-mirror="true">
+        <div class="concept-text" id="about-2" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg2">
           <h1>Typography</h1>
           <p>We reference the grid through a monospace typeface with geometric details.</p>
         </div>
-        <div class="concept-text" id="about-3" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-mirror="true">
+        <div class="concept-text" id="about-3" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg3">
           <h1>Color Scheme</h1>
           <p>Drawing from Swiss design—and its influence on the grid—we combined primary colors with neons to create a vibrant and exciting color scheme.</p>
         </div>
-        <div class="concept-text" id="about-4" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-mirror="true">
+        <div class="concept-text" id="about-4" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg4">
           <h1>Manipulation</h1>
           <p>Throughout the exhibition, we each manipulate and add to the grid to reflect our individual strengths and problem solving capabilities.</p>
         </div>
-        <div class="concept-text" id="about-5" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="1500" data-aos-mirror="true">
-          <h1>Presenting<span class="space"> </span>Us<span class="space"> </span>to<span class="space"> </span>You</h1>
+        <div class="concept-text" id="about-5" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg5">
+          <h1>Presenting Us to&nbsp;You</h1>
           <p>Showcasing our skills and portfolios to you was the driving purpose behind every decision. We didn’t just want to tell you what we’ve learned; we wanted to show you.</p>
+          <br>
+          <!-- <a href="./html/gallery.html">Check out our poster gallery &rarr;</a> -->
         </div> 
     </div>
   </div>
+
   <div id="menuBtnWrap">
     <div id="menuBtn">
       <div class="verticalWrap">
@@ -181,12 +197,18 @@
       <a href="./html/gallery.html"><h1>poster gallery</h1></a>
       <a href="./html/process.html"><h1>our process</h1></a>
       <a href="./html/schedule.html"><h1>schedule of events</h1></a>
+      <div class="navSocialWrap">
+        <a href="https://www.instagram.com/re_formcapstone/" id="insta"><img src="./images/insta.png" alt="Re/Form Instagram"></a>
+        <a href="https://www.linkedin.com/company/re-form-senior-capstone-show" id="linkedin"><img src="./images/linkedin.png" alt="Re/Form Linkedin"></a>
+      </div>
   </div>  
  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+  <script src="../js/butter.js"></script>
+  <script src="../js/butterCustom.js"></script>
   <script src="./js/index.js"></script>
-  <!-- <script src="./js/sketch.js"></script> -->
+  <script src="./js/sketch.js"></script>
 </body>
 </html>
