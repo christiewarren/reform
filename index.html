@@ -8,7 +8,6 @@
    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
 
-   <script src="./js/p5.js"></script>
    <!-- Locomotive scroll css -->
    <link rel="stylesheet" href="./styles/locomotive.css">
    
@@ -41,7 +40,7 @@
                   <img src="./images/slidePuzzle/christie.png" class="slideImg">
                 </div>
                 <div class="square3"></div>
-                <div class="square4 noImgSquare" id="canvas"></div>
+                <div class="square4 noImgSquare" id="squareSketch"></div>
               </div>
               <div class="quad3">
                 <div class="square1">
@@ -115,23 +114,22 @@
     </div>
 
     <div class="concept" id='col1Wrap' data-scroll-section> 
-        <div class="column-1">
-          <div class="conceptImgWrap" id="conceptImg1">
-            <img src="images/concept/Layer1.jpg" alt="Grid" title="Grid" class="conceptImg">
+        <div class="conceptImgs">
+          <div class="conceptImgWrap">
+            <img src="images/concept/About1.jpg" alt="Grid" title="Grid" class="conceptImg portrait">
           </div>
-          <div class="conceptImgWrap" id="conceptImg2">
-            <img src="images/concept/Layer2.png" alt="Grid" title="Grid" class="conceptImg">
+          <div class="conceptImgWrap">
+            <img src="images/concept/About2.jpg" alt="Grid" title="Grid" class="conceptImg landscape">
           </div>
-          <div class="conceptImgWrap" id="conceptImg3">
-            <img src="images/concept/Layer3.jpg" alt="Grid" title="Grid" class="conceptImg">
+          <div class="conceptImgWrap">
+            <img src="images/concept/About3.jpg" alt="Grid" title="Grid" class="conceptImg square">
           </div>
-          <div class="conceptImgWrap" id="conceptImg4">
-            <div class="manipulationSpacer conceptImg"></div>
+          <div class="conceptImgWrap">
+            <div id="conceptSketch" class="portrait"></div>
           </div>
-          <div class="conceptImgWrap" id="conceptImg5">
-            <img src="images/concept/Layer4.png" alt="Grid" title="Grid" class="conceptImg">
+          <div class="conceptImgWrap" >
+            <img src="images/concept/About5.gif" alt="Grid" title="Grid" class="conceptImg square">
           </div>
-          <div class="conceptImgWrap" id="conceptImg6"></div>
         </div>
 
       <div class="conceptTextWrap">
@@ -155,7 +153,7 @@
             <h1>Presenting Us to&nbsp;You</h1>
             <p>Showcasing our skills and portfolios to you was the driving purpose behind every decision. We didn’t just want to tell you what we’ve learned; we wanted to show you.</p>
             <br>
-            <!-- <a href="./html/gallery.html">Check out our poster gallery &rarr;</a> -->
+            <a href="./html/gallery.html">See for yourself &rarr;</a>
           </div> 
       </div>
     </div>
@@ -200,5 +198,6 @@
   <script src="./js/locomotive.js"></script>
   <script src="./js/p5.js"></script>
   <script src="./js/sketch.js"></script>
+  <!-- <script src="./js/conceptSketch.js"></script> -->
 </body>
 </html>

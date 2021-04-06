@@ -44,17 +44,17 @@
   border-bottom: 3px solid var(--black);
   box-sizing: border-box;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 30vh;
 }
 
 canvas {
   display: block;
-}
+}     
 
-.column-1{
-  /* width: min-content; */
-  /* border-right: 3px solid var(--black); */
-  width: 45vw;
+.conceptImgs{
+  width: 50vw;
+  position: relative;
+  height: 100vh;
 }
 
 .conceptImg{
@@ -62,14 +62,41 @@ canvas {
 }
 
 .conceptImgWrap{
+  top: 0;
+  bottom: 0;
   width: 100%;
-  height: 100vh;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0vh;
+  height: 80%;
   /* border: 1px solid blue; */
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.portrait{
+  height: 100%;
+  width: auto;
+  transform: rotateZ(5deg);
+}
+
+.landscape{
+  width: 90%;
+  height: auto;
+  transform: rotateZ(-5deg)
+}
+
+.square{
+  width: 70%;
+}
+
+#conceptSketch{
+  width: 65%;
+  transform: rotateZ(-10deg);
+  border: 2px solid var(--white);
+}
+
+.conceptImgWrap:last-child{
+  z-index: -1;
 }
 
 .concept-text{
@@ -101,16 +128,12 @@ canvas {
       flex-direction: row-reverse;
       position: relative;
    }
-      
-   .column-1{
-      width: 100vw;
-   }
 
    .conceptImgWrap{
     /* border: 1px solid blue; */
     justify-content: center;
     align-items: flex-end;
-    height: 100vh;
+    width: 100%;
     top: 0;
   }
 
@@ -118,7 +141,6 @@ canvas {
     height: 50%;
     width: auto;
     padding-bottom: 10vh;
-
   }
 
    .conceptTextWrap{
