@@ -1,5 +1,3 @@
-
-
 //show and hide menu
 const menuBtn = document.getElementById('menuBtnWrap'),
       menu = document.getElementById('menuWrap');

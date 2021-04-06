@@ -39,7 +39,6 @@ body{
    margin: 0;
    background: var(--white);
    scroll-behavior: smooth;
-   position: relative;
 }
 
 #customCursor{
@@ -54,6 +53,12 @@ h1{
    font-size: 1.65em;
    letter-spacing: .02em;
    word-spacing: -0.28em;
+}
+
+.c-scrollbar_thumb{
+   background: var(--white);
+   border: 2px solid var(--black);
+   opacity: 1;
 }
 
 h2{
@@ -138,7 +143,6 @@ a{
    height: 33px;
    display: inline-block;
    border-radius: 0px;
-   /* transform-origin: top; */
    transition: all 0.5s ease-in-out; 
 }
 
@@ -173,22 +177,6 @@ a{
       transform: scaleY(0.1);
       background: var(--blue);
    }
-   
-   /* #menuBtn:hover > .verticalWrap > span:nth-child(2), #menuBtn:hover > .horizontalWrap > span:nth-child(3){
-      background: var(--blue);
-   }
-   
-   #menuBtn:hover > .verticalWrap > span:nth-child(1){
-      background: var(--aqua);
-   }
-   
-   #menuBtn:hover > .verticalWrap > span:nth-child(3), #menuBtn:hover > .horizontalWrap > span:nth-child(1){
-      background: var(--green);
-   }
-   
-   #menuBtn:hover > .horizontalWrap > span:nth-child(2){
-      background: var(--yellow);
-   } */
  }
 
  @media (max-width: 1035px) {

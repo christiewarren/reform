@@ -9,9 +9,6 @@
    flex-direction: column;
 }
 
-.processItem-onscroll{
-}
-
 .processImg, .processDescrip{
    width: 50vh;
    height: 50vh;

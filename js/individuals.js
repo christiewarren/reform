@@ -138,8 +138,8 @@ function setCursor(individual) {
    customCursor.src = individual.cursor;
 
    document.addEventListener('mousemove', event => {
-      customCursor.style.top = event.clientY + 10 + 'px';
-      customCursor.style.left = event.clientX + 10 + 'px';
+      customCursor.style.top = event.clientY + 8 + 'px';
+      customCursor.style.left = event.clientX - 5 + 'px';
    })
 }
 
