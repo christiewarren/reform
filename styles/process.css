@@ -1,0 +1,92 @@
+.processWrap{
+   display: flex!important;
+   width: max-content;
+   height: 100vh;
+}
+
+.processItem{
+   display: flex;
+   flex-direction: column;
+}
+
+.processItem-onscroll{
+}
+
+.processImg, .processDescrip{
+   width: 50vh;
+   height: 50vh;
+   border: 1px solid black;
+   display: flex;
+   align-items: center;
+}
+
+.processDescrip > p{
+   width: 75%;
+   white-space: normal;
+   margin: auto;
+}
+
+.processPageWrap{
+   display: flex;
+   align-content: stretch;
+   justify-content: space-around;
+   overflow-x: scroll;
+   width: fit-content;
+   padding-right: 6vw;
+   scroll-behavior: smooth;
+}
+
+.butterProcess{
+   overflow-x: scroll;
+}
+
+.processIntroWrap{
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-sizing: border-box;
+   width: 40vw;
+   flex-shrink: 0;   
+   flex-grow: 1;
+   border-bottom: none;
+   border-right: 1px solid var(--black);
+   white-space: normal;
+}
+
+.processIntroWrap > h1, .processIntroWrap > p{
+   width: 50%;
+}
+
+@media (max-width: 850px) {
+   .processIntroWrap{
+      width: 50vw;
+   }
+}
+
+@media (max-width: 605px) {
+   .processIntroWrap{
+      width: 60vw;
+   }
+}
+
+@media (max-width: 500px) {
+   .processIntroWrap{
+      width: 75vw;
+   }
+
+   .processIntroWrap > h1, .processIntroWrap > p{
+      width: 60%;
+   }
+}
+
+@media (max-width: 400px) {
+   .processIntroWrap{
+      width: 85vw;
+   }
+
+   .processIntroWrap > h1, .processIntroWrap > p{
+      width: 75%;
+   }
+}
