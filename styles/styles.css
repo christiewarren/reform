@@ -41,10 +41,6 @@ body{
    scroll-behavior: smooth;
 }
 
-main{
-   display: contents;
-}
-
 #customCursor{
    position: fixed;
    width: 2.8rem;
@@ -402,6 +398,10 @@ a{
 
    .navPreviewImg{
       width: 6vw;
+   }
+
+   .backLink{
+      top: 0;
    }
 }
 
