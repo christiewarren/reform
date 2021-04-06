@@ -61,9 +61,6 @@ canvas {
   width: 100%;
 }
 
-.concept-text:first-child{
-}
-
 .conceptImgWrap{
   width: 100%;
   height: 100vh;
@@ -89,18 +86,6 @@ canvas {
 .conceptTextWrap{
   width: 40vw;
 }
-
-[data-aos="conceptTextScroll"] {
-   opacity: 0;
-   transform: skewX(10deg);
-   transition-property: transform, opacity;
-}
-
-[data-aos="conceptTextScroll"].aos-animate {
-   opacity: 1;
-   transform: skewX(0deg);
- }
-
 
 @media screen and (max-width: 670px){ 
    #landing-animation{

@@ -41,6 +41,10 @@ body{
    scroll-behavior: smooth;
 }
 
+main{
+   display: contents;
+}
+
 #customCursor{
    position: fixed;
    width: 2.8rem;
