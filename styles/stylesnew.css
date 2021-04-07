@@ -323,6 +323,7 @@ a{
 
 .linksWrap{
    width: 20vw;
+   margin-top: 30px;
 }
 
 #insta > img, #linkedin > img{
@@ -478,15 +479,6 @@ a{
     width: 70vw;
     border-right: var(--border);
     background-image: linear-gradient(var(--yellow), var(--green), var(--aqua));
-    position: relative;
-}
-
-#joinUsSticky{
-   position: absolute;
-   top: 0;
-   right: 0;
-   left: 0;
-   height: 100%;
 }
 
 #joinUsContent{
@@ -579,9 +571,6 @@ a{
         margin-bottom: 80px;
     }
     
-    #joinUsSticky{
-      height: 70%;
-   }
     
 }
 
@@ -596,6 +585,10 @@ a{
         border-bottom: var(--border);
         border-right: none;
         background-image: linear-gradient(var(--yellow), var(--green));
+    }
+    
+    #joinUsContent{
+        margin-bottom: 80px;
     }
     
 }
