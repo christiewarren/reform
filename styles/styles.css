@@ -112,6 +112,7 @@ a{
 
 .menuLink > h1{
    transition: all .5s ease-out;
+   margin-top: 0.83em;
 }
 
 .verticalWrap, .horizontalWrap{
