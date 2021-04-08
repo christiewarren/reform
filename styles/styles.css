@@ -556,7 +556,7 @@ a{
 }
 
 #endTuesday{
-    padding-bottom: 50px;
+   margin-bottom: 0;
 }
 
 .stencil{
@@ -571,6 +571,7 @@ a{
     
     #schedulePageWrap{
        flex-wrap: wrap;
+       border-right: none;
     }
     
     #joinUs{

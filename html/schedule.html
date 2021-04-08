@@ -14,7 +14,7 @@
    <link rel="stylesheet" href="../styles/styles.css"> 
 </head>
 <body>
-   <main data-scroll-container>
+   <main data-scroll-container class="scheduleMain">
        <div id="schedulePageWrap">
             <div id="joinUs" data-scroll>
                 <div id="joinUsSticky" data-scroll></div>
@@ -256,7 +256,7 @@
                         <p>GENERAL Q&amp;A</p>
                     </div>
                 </div>
-                <div class="stencil">
+                <div class="stencil" data-scroll>
                     <img src="../images/stencil.gif" alt="Re/Form Logo GIF">
                 </div>
            </div>
@@ -299,18 +299,21 @@
    <script src="../js/index.js"></script>
    <script src="../js/locomotive-scroll.min.js"></script>
    <script>
-    const scroll = new LocomotiveScroll({
-       el: document.querySelector('[data-scroll-container]'),
-       smooth: true,
-       firefoxMultiplier: 50,
-       lerp: 1,
-       tablet: {
-          smooth: true,
-       },
-       smartphone: {
-          smooth: true,
+       window.onload = () => {
+           const scroll = new LocomotiveScroll({
+               el: document.querySelector('[data-scroll-container]'),
+               smooth: true,
+               firefoxMultiplier: 50,
+               lerp: 1,
+               tablet: {
+                   smooth: true,
+               },
+               smartphone: {
+                   smooth: true,
+               }
+           });
        }
-    });
+    
  </script>
 </body>
 </html>
