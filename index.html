@@ -208,43 +208,70 @@
         concept3Text = document.getElementById('concept3Text'),
         concept4Text = document.getElementById('concept4Text'),
         concept5Text = document.getElementById('concept5Text');
-
-      scroll.on('scroll', () => {
+//window height minus distance from top minus height of el
+      scroll.on('scroll', function matchImgToText(){
         let concept2DistTop = window.pageYOffset + concept2Text.getBoundingClientRect().top;
         let concept3DistTop = window.pageYOffset + concept3Text.getBoundingClientRect().top;
         let concept4DistTop = window.pageYOffset + concept4Text.getBoundingClientRect().top;
         let concept5DistTop = window.pageYOffset + concept5Text.getBoundingClientRect().top;
-        let concept2DistBtm = window.pageYOffset - concept2Text.getBoundingClientRect().bottom;
-        let concept3DistBtm = window.pageYOffset - concept3Text.getBoundingClientRect().bottom;
-        let concept4DistBtm = window.pageYOffset - concept4Text.getBoundingClientRect().bottom;
-        let concept5DistBtm = window.pageYOffset - concept5Text.getBoundingClientRect().bottom;
+        let concept2DistBtm = window.innerHeight -  concept2DistTop - concept2Text.clientHeight;
+        let concept3DistBtm = window.innerHeight - concept3DistTop - concept3Text.clientHeight;
+        let concept4DistBtm = window.innerHeight - concept4DistTop - concept4Text.clientHeight;
+        let concept5DistBtm = window.innerHeight - concept5DistTop - concept5Text.clientHeight;
         
-        if (concept2DistTop < 50) {
-          concept2Img.style.zIndex = "6";
-        } else {
-          concept2Img.style.zIndex = "1";
-        }
+        console.log(concept2DistBtm);
 
-        if (concept3DistTop < 50) {
-          concept3Img.style.zIndex = "6";
-        } else {
-          concept3Img.style.zIndex = "1";
-        }
+        if(window.innerWidth > 750){
+          if (concept2DistTop < 50) {
+            concept2Img.style.zIndex = "6";
+          } else {
+            concept2Img.style.zIndex = "1";
+          }
 
-        if (concept4DistTop < 50) {
-          concept4Img.style.zIndex = "6";
-        } else {
-          concept4Img.style.zIndex = "1";
-        }
+          if (concept3DistTop < 50) {
+            concept3Img.style.zIndex = "6";
+          } else {
+            concept3Img.style.zIndex = "1";
+          }
 
-        if (concept5DistTop < 50) {
-          concept5Img.style.zIndex = "6";
-        } else {
-          concept5Img.style.zIndex = "1";
-        }
-        
+          if (concept4DistTop < 50) {
+            concept4Img.style.zIndex = "6";
+          } else {
+            concept4Img.style.zIndex = "1";
+          }
+
+          if (concept5DistTop < 50) {
+            concept5Img.style.zIndex = "6";
+          } else {
+            concept5Img.style.zIndex = "1";
+          }
+        }else{
+          if (concept2DistBtm > -40) {
+            concept2Img.style.zIndex = "6";
+          } else {
+            concept2Img.style.zIndex = "1";
+          }
+
+          if (concept3DistBtm > -40) {
+            concept3Img.style.zIndex = "6";
+          } else {
+            concept3Img.style.zIndex = "1";
+          }
+
+          if (concept4DistBtm > -40) {
+            concept4Img.style.zIndex = "6";
+          } else {
+            concept4Img.style.zIndex = "1";
+          }
+
+          if (concept5DistBtm > -40) {
+            concept5Img.style.zIndex = "6";
+          } else {
+            concept5Img.style.zIndex = "1";
+          }
+        }  
       });
-
+      // window.onresize = matchImgToText;
   </script>
 </body>
 </html>
