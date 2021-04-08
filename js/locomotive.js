@@ -1,4 +1,5 @@
-const scroll = new LocomotiveScroll({
+window.onload = () =>{
+   const scroll = new LocomotiveScroll({
    el: document.querySelector('[data-scroll-container]'),
    smooth: true,
    multiplier: 1,
@@ -10,4 +11,5 @@ const scroll = new LocomotiveScroll({
    smartphone: {
       smooth: true
    }
-});
+   });
+}
