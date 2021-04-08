@@ -20,7 +20,7 @@
       <div id="landing-content">
           <!-- <img id="landing-animation" src="images/concept/grid-animation-placeholder.png" alt="Animated grid of posters" title="Grid Animation"> -->
           <!-- Slide animation -->
-          <div class="rectangleWrap" data-scroll data-scroll-speed="5">
+          <div class="rectangleWrap" data-scroll data-scroll-speed="2">
             <div class="square1Wrap">
               <div class="quad1">
                 <div class="square1 noImgSquare"></div>
@@ -109,45 +109,46 @@
               </div>
             </div>
           </div>
-          <img id="landing-logo" src="images/concept/logoBlackSolid.png" alt="Re/form Logo" title="Re/form Logo"  data-scroll data-scroll-speed="2">
+          <img id="landing-logo" src="images/concept/logoBlackSolid.png" alt="Re/form Logo" title="Re/form Logo"  data-scroll>
       </div>
     </div>
-    <div class="concept" id='col1Wrap' data-scroll-section data-scroll> 
-      <div class="conceptImgs">
-        <div class="conceptImgWrap" data-scroll  data-scroll-speed="-10" data-scroll-direction="horizontal">
-          <img src="images/concept/About1.jpg" alt="Grid" title="Grid" class="conceptImg portrait">
+    <div class="concept" data-scroll-section data-scroll> 
+      <div id="conceptWrap" data-scroll></div>
+      <div class="conceptImgs" data-scroll data-scroll-sticky data-scroll-target="#conceptWrap">
+        <div class="conceptImgWrap" data-scroll id="concept1Img">
+          <img src="images/concept/About1.jpg" alt="grid" title="grid" class="conceptImg portrait">
         </div>
-        <div class="conceptImgWrap" data-scroll  data-scroll-speed="-20" data-scroll-direction="horizontal">
-          <img src="images/concept/About2.jpg" alt="Grid" title="Grid" class="conceptImg landscape">
+        <div class="conceptImgWrap" data-scroll id="concept2Img">
+          <img src="images/concept/About2.jpg" alt="typography" title="typography" class="conceptImg landscape">
         </div>
-        <div class="conceptImgWrap" data-scroll  data-scroll-speed="-30" data-scroll-direction="horizontal">
-          <img src="images/concept/About3.jpg" alt="Grid" title="Grid" class="conceptImg square">
+        <div class="conceptImgWrap" data-scroll  id="concept3Img">
+          <img src="images/concept/About3.jpg" alt="color scheme" title="color" class="conceptImg square">
         </div>
-        <div class="conceptImgWrap" data-scroll  data-scroll-speed="-40" data-scroll-direction="horizontal">
+        <div class="conceptImgWrap" data-scroll id="concept4Img">
           <div id="conceptSketch" class="portrait"></div>
         </div>
-        <div class="conceptImgWrap" data-scroll  data-scroll-speed="-50" data-scroll-direction="horizontal">
-          <img src="images/concept/About5.gif" alt="Grid" title="Grid" class="conceptImg square">
+        <div class="conceptImgWrap" data-scroll id="concept5Img">
+          <img src="images/concept/About5.gif" alt="our work" title="work" class="conceptImg square">
         </div>
       </div>
       <div class="conceptTextWrap">
-        <div class="concept-text" id="about-1" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg1">
+        <div class="concept-text" id="concept1Text">
             <h1>Re/Form</h1>
             <p>Every designer knows the grid, the structure that supports our work and lives. Re/Form embodies how we interpret that structure and how we adapt as structure changes. It’s our way of showcasing the foundation of our education and how we have built upon that foundation.</p>
         </div> 
-        <div class="concept-text" id="about-2" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg2">
+        <div class="concept-text" id="concept2Text">
           <h1>Typography</h1>
           <p>We reference the grid through a monospace typeface with geometric details.</p>
         </div>
-        <div class="concept-text" id="about-3" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg3">
+        <div class="concept-text" id="concept3Text">
           <h1>Color Scheme</h1>
           <p>Drawing from Swiss design—and its influence on the grid—we combined primary colors with neons to create a vibrant and exciting color scheme.</p>
         </div>
-        <div class="concept-text" id="about-4" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg4">
+        <div class="concept-text" id="concept4Text">
           <h1>Manipulation</h1>
           <p>Throughout the exhibition, we each manipulate and add to the grid to reflect our individual strengths and problem solving capabilities.</p>
         </div>
-        <div class="concept-text" id="about-5" data-aos="conceptTextScroll" data-aos-easing="ease-in-out" data-aos-duration="500" data-aos-mirror="true" data-aos-anchor="#conceptImg5">
+        <div class="concept-text" id="concept5Text">
           <h1>Presenting Us to&nbsp;You</h1>
           <p>Showcasing our skills and portfolios to you was the driving purpose behind every decision. We didn’t just want to tell you what we’ve learned; we wanted to show you.</p>
           <br>

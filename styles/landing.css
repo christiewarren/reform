@@ -34,6 +34,7 @@
    margin-left: auto;
    margin-right: auto;
    max-height: 18vh;
+   margin-top: 5vh;
 }
 
 .concept{
@@ -44,6 +45,7 @@
   box-sizing: border-box;
   justify-content: center;
   margin-top: 30vh;
+  position: relative;
 }
 
 canvas {
@@ -56,21 +58,12 @@ canvas {
   height: 100vh;
 }
 
-#conceptImgs{
-  position: absolute;
-  left: -20vw;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background: blue;
-}
-
 .conceptImg{
   width: 100%;
 }
 
 .conceptImgWrap{
-  top: 0;
+  top: 10vh;
   bottom: 0;
   width: 100%;
   height: 80%;
@@ -79,6 +72,35 @@ canvas {
   align-items: center;
   justify-content: center;
   position: absolute;
+}
+
+#conceptWrap{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+}
+
+#concept1Img{
+  z-index: 5;
+}
+
+#concept2Img{
+  z-index: 4;
+}
+
+#concept3Img{
+  z-index: 3;
+}
+
+#concept4Img{
+  z-index: 2;
+}
+
+#concept5Img{
+  z-index: 1;
 }
 
 .portrait{
@@ -100,6 +122,11 @@ canvas {
 #conceptSketch{
   width: 65%;
   transform: rotateZ(-10deg);
+  display: flex;
+  justify-content: center;
+}
+
+#conceptSketch > canvas{
   border: 2px solid var(--white);
 }
 
@@ -122,6 +149,88 @@ canvas {
   width: 40vw;
 }
 
+@media screen and (max-width: 1124px){ 
+  .portrait{
+    height: 80%;
+  }
+
+  .conceptImgs{
+    width: 55vw;
+  }
+
+  .landscape{
+    width: 100%;
+  }
+
+  .square{
+    width: 85%;
+  }
+
+  .concept-text{
+    width: 75%;
+  }
+}   
+
+@media screen and (max-width: 868px){ 
+  .portrait{
+    height: 75%;
+  }
+
+  #conceptSketch{
+    height: 80%;
+  }
+
+  .conceptImgs{
+    width: 52vw;
+    margin-left: 4vw;
+  }
+
+  .conceptTextWrap{
+    margin-left: 5vw;
+  }
+}   
+
+@media screen and (max-width: 750px){ 
+  .concept{
+    flex-wrap: wrap;
+    margin-top: 10vh;
+  }
+
+  .conceptTextWrap{
+    width: 100vw;
+    margin-left: none;
+  }
+
+  .concept-text{
+    height: 30vh;
+  }
+
+  .conceptImgs{
+    width: 90vw;
+    height: 68vh;
+    background: var(--white);
+  }
+
+  .portrait{
+    width: 50%;
+    height: auto;
+  }
+
+  .landscape{
+    width: 65%;
+  }
+
+  .square{
+    width: 55%;
+  }
+
+  #conceptSketch{
+    width: 60%;
+    height: 85%;
+  }
+}   
+
+
 @media screen and (max-width: 670px){ 
    #landing-animation{
       max-width: 95%;
@@ -129,43 +238,47 @@ canvas {
 
    #landing{
      border: none;
-   }
-      
+   }    
+}
+
+@media screen and (max-width: 600px){ 
    .concept{
-      flex-wrap: wrap;
-      flex-direction: row-reverse;
-      position: relative;
-   }
-
-   .conceptImgWrap{
-    /* border: 1px solid blue; */
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    top: 0;
+     margin-top: 5vh;
+   } 
+   
+   .portrait{
+    width: 60%;
+    height: auto;
   }
 
-  .conceptImg{
-    height: 50%;
-    width: auto;
-    padding-bottom: 10vh;
+  .landscape{
+    width: 75%;
   }
 
-   .conceptTextWrap{
-      width: 100vw;
-      position: absolute;
-      top: 0;
-      background: var(--white);
-      height: 40vh;
-      z-index: -1;
-      align-items: flex-start;
-   }
-      
-   .concept-text{
-      width: 75%;
-      margin-left: auto;
-      margin-right: auto;
-   }
+  .square{
+    width: 65%;
+  }
+
+  #conceptSketch{
+    height: 65%;
+  }
+
+  .conceptImgWrap{
+    top: 4vh;
+  }
+
+  .conceptImgs{
+    height: 55vh;
+  }
+
+  .concept-text{
+    height: 36vh;
+  }
+
+  .concept-text:last-child{
+    height: 48vh;
+  }
+
 }
 
 /* Slide animation ------------------------------------------- */
