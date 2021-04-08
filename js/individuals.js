@@ -26,6 +26,7 @@ class individual {
       this.work1Alt = work1Alt;
       this.work2Alt = work2Alt;
       this.work3Alt = work3Alt;
+      this.square = '../images/slidePuzzle/' + uniqueId + 'Square.jpg';
    }
 }
 
@@ -198,7 +199,11 @@ function getNextIndividual(individual){
 
 function loadPersonNavInfo(){
    previousName.innerHTML = previousIndividual.fName + '<br>' + previousIndividual.lName;
+   previousPersonImage.src = previousIndividual.square;
+   previousPersonImage.alt = previousIndividual.fName + previousIndividual.lName;
    nextName.innerHTML = nextIndividual.fName + '<br>' + nextIndividual.lName;
+   nextPersonImage.src = nextIndividual.square;
+   nextPersonImage.alt = nextIndividual.fName + nextIndividual.lName;
 }
 
 function addLinkToPersonNav(navBtn, navIndividual){
