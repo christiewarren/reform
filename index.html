@@ -197,6 +197,54 @@
   <script src="./js/locomotive.js"></script>
   <script src="./js/p5.js"></script>
   <script src="./js/sketch.js"></script>
-  <!-- <script src="./js/conceptSketch.js"></script> -->
+  <script>
+    const concept1Img = document.getElementById('concept1Img'),
+        concept2Img = document.getElementById('concept2Img'),
+        concept3Img = document.getElementById('concept3Img'),
+        concept4Img = document.getElementById('concept4Img'),
+        concept5Img = document.getElementById('concept5Img'),
+        concept1Text = document.getElementById('concept1Text'),
+        concept2Text = document.getElementById('concept2Text'),
+        concept3Text = document.getElementById('concept3Text'),
+        concept4Text = document.getElementById('concept4Text'),
+        concept5Text = document.getElementById('concept5Text');
+
+      scroll.on('scroll', () => {
+        let concept2DistTop = window.pageYOffset + concept2Text.getBoundingClientRect().top;
+        let concept3DistTop = window.pageYOffset + concept3Text.getBoundingClientRect().top;
+        let concept4DistTop = window.pageYOffset + concept4Text.getBoundingClientRect().top;
+        let concept5DistTop = window.pageYOffset + concept5Text.getBoundingClientRect().top;
+        let concept2DistBtm = window.pageYOffset - concept2Text.getBoundingClientRect().bottom;
+        let concept3DistBtm = window.pageYOffset - concept3Text.getBoundingClientRect().bottom;
+        let concept4DistBtm = window.pageYOffset - concept4Text.getBoundingClientRect().bottom;
+        let concept5DistBtm = window.pageYOffset - concept5Text.getBoundingClientRect().bottom;
+        
+        if (concept2DistTop < 50) {
+          concept2Img.style.zIndex = "6";
+        } else {
+          concept2Img.style.zIndex = "1";
+        }
+
+        if (concept3DistTop < 50) {
+          concept3Img.style.zIndex = "6";
+        } else {
+          concept3Img.style.zIndex = "1";
+        }
+
+        if (concept4DistTop < 50) {
+          concept4Img.style.zIndex = "6";
+        } else {
+          concept4Img.style.zIndex = "1";
+        }
+
+        if (concept5DistTop < 50) {
+          concept5Img.style.zIndex = "6";
+        } else {
+          concept5Img.style.zIndex = "1";
+        }
+        
+      });
+
+  </script>
 </body>
 </html>
