@@ -9,7 +9,7 @@
       smooth: true
    },
    smartphone: {
-      smooth: true
+      smooth: false
    }
    });
 // }
