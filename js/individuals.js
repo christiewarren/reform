@@ -14,7 +14,7 @@ class individual {
       this.work2 = '../images/individuals/' + uniqueId + '/' + work2;
       this.work3 = '../images/individuals/' + uniqueId + '/' + work3;
       this.bio = bio;
-      if(this.uniqueId == 'abby' || this.uniqueId == 'dani'){
+      if(this.uniqueId == 'abby' || this.uniqueId == 'dani' || this.uniqueId == 'eileen'){
          this.cursor = '../images/cursors/' + uniqueId + 'Cursor.png';
       }else{
          this.cursor = '../images/cursors/' + uniqueId + 'Cursor.svg';
