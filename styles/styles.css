@@ -70,7 +70,7 @@ h2{
 
 p{
    font-family: 'akzidenzReg';
-   font-size: 0.84em;
+   font-size: 0.98em;
 }
 
 a{
@@ -364,7 +364,7 @@ a{
 }
 
 .navPreviewImg{
-   width: 4vw;
+   width: 10vw;
    display: block;
    margin-bottom: 5vh;
 }
@@ -400,10 +400,6 @@ a{
 
    #nextBtn, #prevBtn{
       width: 3vw;
-   }
-
-   .navPreviewImg{
-      width: 6vw;
    }
 
    .backLink{
@@ -459,6 +455,10 @@ a{
       min-height: 60vw;
       height: unset!important;
    }
+
+   .navPreviewImg{
+      width: 15vw;
+   }
 }
 
 @media (max-width: 564px) {
@@ -471,10 +471,6 @@ a{
 
    h1{
       letter-spacing: -.03em;
-   }
-
-   .navPreviewImg{
-      width: 10vw;
    }
 
    #nextBtn, #prevBtn{
