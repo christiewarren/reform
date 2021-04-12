@@ -107,7 +107,11 @@ const fullName = document.getElementById('name'),
       individualPageWrap = document.getElementById('individualPageWrap'),
       cover1 = document.getElementById('cover1'),
       cover2 = document.getElementById('cover2'),
-      cover3 = document.getElementById('cover3');
+      cover3 = document.getElementById('cover3'),
+      imgModal = document.getElementById('imgModal');
+
+let covers = [cover1, cover2, cover3];
+let modalImg = document.getElementById('modalImg');
 
 function loadIndividualInfo(individual){
    //fullName.innerHTML = individual.name;
@@ -117,7 +121,6 @@ function loadIndividualInfo(individual){
    insta.href = individual.insta;
    linkedin.href = individual.linkedin;
    bio.innerHTML = individual.bio;
-   //individualPageWrap.style.cursor = 'url("../images/' + individual.cursor + '"), auto';
    cover1.src = individual.cover1;
    cover2.src = individual.cover2;
    cover3.src = individual.cover3;
@@ -128,8 +131,37 @@ function loadIndividualInfo(individual){
    work3.src = individual.work3;
    work3.alt = individual.work3Alt;
    setCursor(individual);
-   //checkForGifs(individual);
    getNavIndividuals(individual);
+   addWorkClickListeners();
+}
+
+function addWorkClickListeners(){
+   covers.forEach((element) => {
+      element.addEventListener('click', () => {
+         showImgModal(element);
+      })
+   })
+}
+
+function showImgModal(clickedCover){
+   if(clickedCover == cover1){
+      modalImg.src = work1.src;
+   }else if(clickedCover == cover2){
+      modalImg.src = work2.src;
+   }else{
+      modalImg.src = work3.src;
+   }
+   
+   imgModal.style.display = 'grid';
+
+   addModalCloseListener();
+}
+
+function addModalCloseListener(){
+   imgModal.addEventListener('click', () => {
+      imgModal.style.display = 'none';
+      modalImg.src = '';
+   })
 }
 
 const customCursor = document.getElementById('customCursor');
@@ -159,7 +191,6 @@ function getSelectedIndividual(selectedPoster){
       return;
    })
 }
-
 
 document.addEventListener('DOMContentLoaded', getSelectedPoster);
 
@@ -212,42 +243,3 @@ function addLinkToPersonNav(navBtn, navIndividual){
       window.location = './individual.html?' + urlSearchParam;
    })
 }
-
-
-// let workImgs = Array.from(document.getElementsByClassName('workImg'));
-
-// function checkForGifs(individual){
-//    workImgs.forEach((img) => {
-//       addGifListeners(img, individual);
-//    })
-// }
-
-// function addGifListeners(img, individual){
-//    addMouseOverListener(img, individual);
-//    addMouseOutListener(img, individual);
-// }
-
-// function addMouseOverListener(img, individual){
-//    img.addEventListener('mouseout', () => {
-//       if(workImgs.indexOf(img) == 0){
-//          img.src = individual.cover1;
-//       }else if(workImgs.indexOf(img) == 1){
-//          img.src = individual.cover2;
-//       }else{
-//          img.src = individual.cover3;
-//       }
-//    })
-// }
-
-// function addMouseOutListener(img, individual){
-//    img.addEventListener('mouseover', () => {
-//       if(workImgs.indexOf(img) == 0){
-//          img.src = individual.work1;
-//       }else if(workImgs.indexOf(img) == 1){
-//          img.src = individual.work2;
-//       }else{
-//          img.src = individual.work3;
-//       }
-//    })
-// }
-

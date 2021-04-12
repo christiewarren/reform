@@ -45,6 +45,7 @@ body{
    position: fixed;
    width: 2.8rem;
    pointer-events: none;
+   z-index: 50;
 }
 
 h1{
@@ -89,7 +90,7 @@ a{
    position: absolute;
    top: 1.5vw;
    right: 1.5vw;
-   z-index: 100;
+   z-index: 20;
 }
 
 #menuBtn{
@@ -473,13 +474,12 @@ a{
    top: 0;
    left: 0;
    width: 100%;
-   z-index: -10;
+   z-index: 10;
 }
 
 @media (hover: hover) {
    .coverImg{
       opacity: 1;
-      z-index: 10;
    }
 
    .coverImg:hover{
@@ -542,6 +542,45 @@ a{
    display: block;
 }
 
+#imgModal{
+   background: rgba(0, 0, 0, 0.75);
+   width: 100vw;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   place-items: center;
+   z-index: 49;
+   display: none;
+   cursor: pointer;
+}
+
+#modalImg{
+   width: 45%;
+   cursor: none;
+}
+
+#closeWrap{
+   background: var(--black);
+   width: 4vw;
+   height: 4vw;
+   position: absolute;
+   top: 2vw;
+   right: 2vw;
+   display: grid;
+   place-items: center;
+   border: 2px solid var(--white);
+}
+
+#closeWrap > p{
+   color: var(--white);
+   font-size: 1.75em;
+   font-family: 'avenuex', sans-serif;
+   margin: 0;
+   margin-top: -3px;
+   cursor: pointer;
+}
+
 @media (max-width: 1035px) {
    #individualPageWrap{
       padding-bottom: 200px;
@@ -556,6 +595,9 @@ a{
       width: 30vw;
    }
    
+   #modalImg{
+      width: 55%;
+   }
 }
 
 @media (max-width: 949px) {
@@ -627,6 +669,15 @@ a{
    .navPreviewImg{
       width: 15vw;
    }
+
+   #modalImg{
+      width: 70%;
+   }
+
+   #closeWrap{
+      width: 6vw;
+      height: 6vw;
+   }
 }
 
 @media (max-width: 564px) {
@@ -652,6 +703,28 @@ a{
    .bio{
       min-height: 75vw;
       height: unset!important;
+   }
+
+   #modalImg{
+      width: 85%;
+   }
+
+   #closeWrap{
+      width: 8vw;
+      height: 8vw;
+   }
+}
+
+@media (max-width: 475px) {
+   #modalImg{
+      width: 92%;
+   }
+
+   #closeWrap{
+      width: 10vw;
+      height: 10vw;
+      top: 6vw;
+      right: 6vw;
    }
 }
 
