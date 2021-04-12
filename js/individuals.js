@@ -167,13 +167,15 @@ function addModalCloseListener(){
 const customCursor = document.getElementById('customCursor');
 
 function setCursor(individual) {
-   document.body.style.cursor = "none";
-   customCursor.src = individual.cursor;
-
-   document.addEventListener('mousemove', event => {
-      customCursor.style.top = event.clientY + 8 + 'px';
-      customCursor.style.left = event.clientX - 5 + 'px';
-   })
+   if(!isMobile){
+      document.body.style.cursor = "none";
+      customCursor.src = individual.cursor;
+   
+      document.addEventListener('mousemove', event => {
+         customCursor.style.top = event.clientY + 8 + 'px';
+         customCursor.style.left = event.clientX - 5 + 'px';
+      })
+   }
 }
 
 let selectedPoster;

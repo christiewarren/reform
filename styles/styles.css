@@ -521,6 +521,13 @@ a{
    border: var(--border);
    cursor: pointer;
    padding-top: 5vh;
+   padding-bottom: 12vh;
+}
+
+@media (hover: hover) {
+   #previousNav, #nextNav{
+      padding-bottom: 0;
+   }
 }
 
 #previousImg{
