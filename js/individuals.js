@@ -3,9 +3,10 @@ class individual {
       this.fName = fName;
       this.lName = lName;
       this.name = fName + ' ' + lName;
-      this.linkedin = 'https://www.linkedin.com/in/' + linkedin;
-      this.insta = '@' + insta;
-      this.instaLink = 'https://www.instagram.com/' + insta;
+      this.linkedin = linkedin;
+      this.linkedinLink = 'https://www.linkedin.com/in/' + linkedin;
+      this.insta = insta;
+      this.instaLink = 'https://www.instagram.com/@' + insta;
       this.siteLink = "https://" + site;
       this.site = site;
       this.uniqueId = uniqueId;
@@ -33,9 +34,9 @@ class individual {
 const  
       abby = new individual('abby', 'blend', 'abby-blend-96a363198', 'abbyblendart', 'abbyblend.com', 'figment.gif', 'champs.jpg', 'foreverUSA.gif', 'figmentBW.jpg', 'champsBW.jpg', 'foreverUSABW.jpg', "Hello, I’m Abby! Whether I am designing for websites, packaging, or motion, my goal is to provide an experience for the audience. After graduation, I hope to pursue a career in branding or UI/UX.<br><br>Inspired by my appreciation for and experience with tactile design elements, I created this poster to represent the grid in a physical space. I used a punch needling technique to produce gridded shapes with stimulating textures.", 'abby', 'work1Alt', 'Champs menu design', 'Forever USA data visualization'),
 
-      dani = new individual('danielle', 'berman', '', 'daniberman.dzn', 'daniberman.com', 'posters.gif', 'gratif.gif', 'wmag.gif', 'postersBW.jpg', 'gratifBW.jpg', 'wmagBW.jpg', "Hello! I'm Dani, a passionate creative who aspires to communicate and storytell through design. I hope to pursue a career where I can focus on my aspirations of creating lasting impacts on an audience through decisions and engaging solutions.<br><br>My poster utilizes digital manipulation and long-exposure photography. Juxtaposing these techniques with the constraint of a grid makes an abstract, textured composition that resembles my curiosity for innovating and creating new perspectives.", 'dani', 'Sports and Entertainment Sustainability posters', 'Gratif branding', 'Irresistable Magazine'),
+      dani = new individual('danielle', 'berman', 'danielle-avery-berman', 'daniberman.dzn', 'daniberman.com', 'posters.gif', 'gratif.gif', 'wmag.gif', 'postersBW.jpg', 'gratifBW.jpg', 'wmagBW.jpg', "Hello! I'm Dani, a passionate creative who aspires to communicate and storytell through design. I hope to pursue a career where I can focus on my aspirations of creating lasting impacts on an audience through decisions and engaging solutions.<br><br>My poster utilizes digital manipulation and long-exposure photography. Juxtaposing these techniques with the constraint of a grid makes an abstract, textured composition that resembles my curiosity for innovating and creating new perspectives.", 'dani', 'Sports and Entertainment Sustainability posters', 'Gratif branding', 'Irresistable Magazine'),
 
-      carly = new individual('carly', 'blonski', 'carly-blonski-a60178130', 'carlyblonski.dzn', 'carlyblonski.com', 'work1', 'diarrheaData.gif', 'work3', 'cover1', 'diarrheaDataBW.jpg', 'cover2', "Hello! I'm Carly! I enjoy utilizing design to bring stories to life, whether that's through branding, motion, UI/UX, or creating a physical space to allow the audience to fully immerse themselves into the story.<br><br>With the idea of design extending off the page into physical spaces and being interactive, I played with the notion of taking a grid made up of the X and Y planes and added the Z plane to physically create a perspective.", 'carly', 'work1Alt', 'Diarrhea data visualization', 'work2Alt'),
+      carly = new individual('carly', 'blonski', 'carly-blonski-a60178130', 'carlyblonski.dzn', 'carlyblonski.com', 'hedy.gif', 'diarrheaData.gif', 'work3', 'hedyBW.jpg', 'diarrheaDataBW.jpg', 'cover2', "Hello! I'm Carly! I enjoy utilizing design to bring stories to life, whether that's through branding, motion, UI/UX, or creating a physical space to allow the audience to fully immerse themselves into the story.<br><br>With the idea of design extending off the page into physical spaces and being interactive, I played with the notion of taking a grid made up of the X and Y planes and added the Z plane to physically create a perspective.", 'carly', 'Hedy Lamarr motion design', 'Diarrhea data visualization', 'work2Alt'),
 
       ron = new individual('ron', 'feinberg', 'ronald-feinberg-094379113', 're.fein', 'refein.com', 'packaging.gif', 'wodsmall.gif', 'wmag.gif', 'packagingBW.jpg', 'wodsmallBW.jpg', 'wmagBW.jpg', "What's up friends! The name's Ron. My life in design thrives off of my inherent need to constantly break the glass ceiling, whether that be through self-taught skills or using the layout less traveled. From motion to editorial design and everything in between, I'm not one settle.<br><br>To showcase this, I based my poster off of my 3D composition skills, utilizing my appreciation for pushing boundaries and my in-your-face design style, while also featuring my love for music.", 'ron', 'Master of deception packaging', 'World of Dreams poster', 'Fire and Ice Magazine'),
 
@@ -118,8 +119,13 @@ function loadIndividualInfo(individual){
    poster.src = individual.poster;
    site.href = individual.siteLink;
    site.innerHTML = individual.site;
-   insta.href = individual.insta;
-   linkedin.href = individual.linkedin;
+   if(individual.instaLink != 'https://www.instagram.com/@'){
+      insta.href = individual.instaLink;
+      insta.style.display = 'inline-block';
+   }else{
+      insta.style.display = 'none';
+   }
+   linkedin.href = individual.linkedinLink;
    bio.innerHTML = individual.bio;
    cover1.src = individual.cover1;
    cover2.src = individual.cover2;
