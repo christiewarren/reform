@@ -6,7 +6,7 @@ class individual {
       this.linkedin = linkedin;
       this.linkedinLink = 'https://www.linkedin.com/in/' + linkedin;
       this.insta = insta;
-      this.instaLink = 'https://www.instagram.com/@' + insta;
+      this.instaLink = 'https://www.instagram.com/' + insta + '/';
       this.siteLink = "https://" + site;
       this.site = site;
       this.uniqueId = uniqueId;
