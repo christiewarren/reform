@@ -8,6 +8,26 @@
    --border: 1px solid var(--black);
 }
 
+/* @media (hover: none) {
+   .processWrap {
+      height: 90vh;
+      padding-right: 20vw;
+   }
+
+   .processTitle{
+      height: 90vh;
+   }
+
+   .processIntroWrap{
+      height: 90vh;
+   }
+
+   .processImg, .processDescrip{
+      width: 45vh;
+      height: 45vh;
+   }
+ } */
+
 .processWrap{
    display: flex!important;
    width: max-content;
