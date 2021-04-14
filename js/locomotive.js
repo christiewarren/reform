@@ -5,6 +5,7 @@
    multiplier: 1,
    touchMultiplier: 3,
    firefoxMultiplier: 50,
+   lerp: 0.1,
    tablet: {
       smooth: true
    },
