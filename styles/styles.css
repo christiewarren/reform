@@ -840,6 +840,29 @@ a{
    margin-bottom: 0;
 }
 
+.installation{
+   margin-top: 12vh;
+   display: grid;
+   place-items: center;
+   margin-bottom: 5vh;
+}
+
+.installation > h2, .installation > p{
+   width: 80%;
+   margin: auto;
+}
+
+.installation > h2{
+   font-size: 1em;
+   margin-bottom: 25px;
+}
+
+.installation > img{
+   width: 80%;
+   margin: auto;
+   margin-bottom: 5vh;
+}
+
 .stencil{
    width: 100%;
 }
